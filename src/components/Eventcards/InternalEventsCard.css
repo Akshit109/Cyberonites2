@@ -1,0 +1,638 @@
+/* ==========================================================
+   CYBERONITES — INTERNAL EVENTS
+   TECHNICAL EDITORIAL THEME
+========================================================== */
+
+:root {
+  --internal-bg: #080808;
+  --internal-white: #eeeeee;
+  --internal-muted: rgba(255, 255, 255, 0.45);
+  --internal-dim: rgba(255, 255, 255, 0.22);
+  --internal-line: rgba(255, 255, 255, 0.11);
+  --internal-grid: rgba(255, 255, 255, 0.035);
+
+  --internal-mono:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+}
+
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.internal-highlight {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 650px;
+
+  padding: 0 4vw;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--internal-bg);
+
+  color: var(--internal-white);
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.internal-highlight__grid {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--internal-grid) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--internal-grid) 1px,
+      transparent 1px
+    );
+
+  background-size: 76px 76px;
+}
+
+
+/* ==========================================================
+   TOP BORDER
+========================================================== */
+
+.internal-highlight::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 4vw;
+  right: 4vw;
+
+  height: 1px;
+
+  background: var(--internal-line);
+}
+
+
+/* ==========================================================
+   TOP
+========================================================== */
+
+.internal-highlight__top {
+  position: relative;
+
+  z-index: 2;
+
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--internal-line);
+}
+
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.internal-highlight__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: var(--internal-mono);
+
+  font-size: 30px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--internal-muted);
+}
+
+
+.internal-highlight__number {
+  color: var(--internal-white);
+}
+
+
+.internal-highlight__line {
+  width: 42px;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.internal-highlight__status {
+  font-family: var(--internal-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  color: var(--internal-dim);
+}
+
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+.internal-highlight__content {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 80px 1fr 280px;
+
+  gap: 30px;
+
+  padding:
+
+    80px
+
+    3vw
+
+    95px;
+}
+
+
+/* ==========================================================
+   INDEX
+========================================================== */
+
+.internal-highlight__index {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+
+  padding-top: 10px;
+
+  font-family: var(--internal-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: var(--internal-dim);
+}
+
+
+.internal-highlight__index span:first-child {
+  color: var(--internal-white);
+
+  font-size: 11px;
+}
+
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.internal-highlight__main {
+  max-width: 760px;
+}
+
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.internal-highlight__label {
+  margin: 0 0 25px;
+
+  font-family: var(--internal-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--internal-muted);
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.internal-highlight__title {
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(75px, 9vw, 145px);
+
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+
+  text-transform: uppercase;
+}
+
+
+.internal-highlight__title span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.42);
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.internal-highlight__description {
+  max-width: 600px;
+
+  margin:
+
+    42px
+
+    0
+
+    34px;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.46);
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.internal-highlight__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  min-width: 190px;
+
+  padding: 15px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  background: #eeeeee;
+
+  color: #080808;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.internal-highlight__button:hover {
+  background: transparent;
+
+  color: #eeeeee;
+
+  transform: translateY(-2px);
+}
+
+
+.internal-highlight__button-arrow {
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+/* ==========================================================
+   RIGHT PANEL
+========================================================== */
+
+.internal-highlight__panel {
+  align-self: center;
+
+  min-height: 245px;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.015);
+}
+
+
+/* ==========================================================
+   PANEL HEADER
+========================================================== */
+
+.internal-highlight__panel-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--internal-line);
+
+  font-family: var(--internal-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: var(--internal-dim);
+}
+
+
+/* ==========================================================
+   PANEL TITLE
+========================================================== */
+
+.internal-highlight__panel-title {
+  margin: 25px 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+}
+
+
+/* ==========================================================
+   PANEL ROW
+========================================================== */
+
+.internal-highlight__panel-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+  font-family: var(--internal-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255, 255, 255, 0.25);
+}
+
+
+.internal-highlight__panel-row strong {
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+
+/* ==========================================================
+   BOTTOM
+========================================================== */
+
+.internal-highlight__bottom {
+  position: absolute;
+
+  left: 4vw;
+  right: 4vw;
+
+  bottom: 25px;
+
+  z-index: 3;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 16px;
+
+  border-top: 1px solid var(--internal-line);
+
+  font-family: var(--internal-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(255, 255, 255, 0.22);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+
+  .internal-highlight {
+    min-height: 700px;
+  }
+
+  .internal-highlight__content {
+    grid-template-columns: 60px 1fr;
+
+    padding:
+
+      70px
+
+      2vw
+
+      110px;
+  }
+
+  .internal-highlight__panel {
+    display: none;
+  }
+
+  .internal-highlight__title {
+    font-size: clamp(70px, 12vw, 120px);
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .internal-highlight {
+    min-height: 680px;
+
+    padding: 0 6vw;
+  }
+
+
+  .internal-highlight__top {
+    height: 85px;
+  }
+
+
+  .internal-highlight__status {
+    display: none;
+  }
+
+
+  .internal-highlight__content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding:
+
+      60px
+
+      0
+
+      110px;
+  }
+
+
+  .internal-highlight__index {
+    flex-direction: row;
+
+    gap: 14px;
+  }
+
+
+  .internal-highlight__title {
+    font-size: 20vw;
+
+    line-height: 0.85;
+  }
+
+
+  .internal-highlight__description {
+    margin-top: 32px;
+
+    font-size: 13px;
+  }
+
+
+  .internal-highlight__bottom {
+    left: 6vw;
+    right: 6vw;
+  }
+
+
+  .internal-highlight__bottom span:nth-child(2) {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .internal-highlight__eyebrow {
+    font-size: 8px;
+
+    gap: 9px;
+  }
+
+
+  .internal-highlight__line {
+    width: 25px;
+  }
+
+
+  .internal-highlight__title {
+    font-size: 19vw;
+  }
+
+
+  .internal-highlight__description {
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+
+  .internal-highlight__button {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .internal-highlight__button {
+    transition: none;
+  }
+
+}

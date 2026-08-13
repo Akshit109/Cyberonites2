@@ -1,0 +1,865 @@
+
+
+  .cyb-new-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    background: #000000;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  /* ==========================================================
+    GRID
+  ========================================================== */
+
+  .cyb-new-hero__grid {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background-image:
+      linear-gradient(
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,0.035) 1px,
+        transparent 1px
+      );
+
+    background-size: 76px 76px;
+  }
+
+
+  /* ==========================================================
+    SOFT CENTER LIGHT
+  ========================================================== */
+
+  .cyb-new-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 1;
+
+    background:
+      radial-gradient(
+        circle at 50% 45%,
+        rgba(255,255,255,0.035),
+        transparent 45%
+      );
+  }
+
+
+  /* ==========================================================
+    TOP BAR
+  ========================================================== */
+
+  .cyb-new-hero__top {
+    position: relative;
+    z-index: 5;
+
+    width: calc(100% - 8vw);
+    margin: 0 auto;
+
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 30px;
+    letter-spacing: 0.14em;
+
+    color: rgba(255,255,255,0.38);
+  }
+
+
+  .cyb-new-hero__top-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+
+  .cyb-new-hero__top-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+
+  .cyb-new-hero__index {
+    color: rgba(255,255,255,0.8);
+  }
+
+
+  .cyb-new-hero__top-line {
+    width: 48px;
+    height: 1px;
+
+    background: rgba(255,255,255,0.25);
+  }
+
+
+  /* ==========================================================
+    MAIN
+  ========================================================== */
+
+  .cyb-new-hero__main {
+    position: relative;
+    z-index: 3;
+
+    width: calc(100% - 8vw);
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      310px;
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 70px 2vw 60px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ==========================================================
+    LEFT SIDE
+  ========================================================== */
+
+  .cyb-new-hero__left {
+    min-width: 0;
+  }
+
+
+  /* ==========================================================
+    LOCATION
+  ========================================================== */
+
+  .cyb-new-hero__location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 0.16em;
+
+    color: rgba(255,255,255,0.42);
+  }
+
+
+  .cyb-new-hero__location-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #fff;
+  }
+
+
+  /* ==========================================================
+    TITLE
+  ========================================================== */
+
+  .cyb-new-hero__title {
+    margin: 0;
+
+    width: 100%;
+
+    white-space: nowrap;
+
+    font-family:
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+
+    font-size:
+      clamp(4rem, 9vw, 9rem);
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.075em;
+
+    text-transform: uppercase;
+  }
+
+
+  /* CYBER */
+
+  .cyb-new-hero__title-solid {
+    color: #eeeeee;
+  }
+
+
+  /* ONITES */
+
+  .cyb-new-hero__title-outline {
+    color: transparent;
+
+    -webkit-text-stroke:
+      1.8px rgba(255,255,255,0.5);
+
+    text-stroke:
+      1.8px rgba(255,255,255,0.5);
+  }
+
+
+  /* ==========================================================
+    DIVIDER
+  ========================================================== */
+
+  .cyb-new-hero__line {
+    width: 90%;
+
+    height: 1px;
+
+    margin-top: 38px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,0.45),
+        rgba(255,255,255,0.08),
+        transparent
+      );
+  }
+
+
+  /* ==========================================================
+    INTRO
+  ========================================================== */
+
+  .cyb-new-hero__intro {
+    display: grid;
+
+    grid-template-columns: 40px minmax(0, 680px);
+
+    gap: 18px;
+
+    margin-top: 25px;
+  }
+
+
+  .cyb-new-hero__intro-number {
+    padding-top: 4px;
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 10px;
+
+    color: rgba(255,255,255,0.28);
+  }
+
+
+  .cyb-new-hero__intro p {
+    margin: 0;
+
+    max-width: 680px;
+
+    font-family:
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+
+    font-size: clamp(16px, 1.25vw, 20px);
+
+    line-height: 1.65;
+
+    color: rgba(255,255,255,0.58);
+  }
+
+
+  /* ==========================================================
+    ACTIONS
+  ========================================================== */
+
+  .cyb-new-hero__actions {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 34px;
+  }
+
+
+  .cyb-new-hero__button {
+    height: 52px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border-radius: 999px;
+
+    font-family:
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+
+  .cyb-new-hero__button:hover {
+    transform: translateY(-2px);
+  }
+
+
+  .cyb-new-hero__button--primary {
+    border: 1px solid #eeeeee;
+
+    background: #eeeeee;
+
+    color: #050505;
+  }
+
+
+  .cyb-new-hero__button--secondary {
+    border: 1px solid rgba(255,255,255,0.18);
+
+    background: transparent;
+
+    color: #eeeeee;
+  }
+
+
+  .cyb-new-hero__button--secondary:hover {
+    border-color: rgba(255,255,255,0.45);
+
+    background: rgba(255,255,255,0.04);
+  }
+
+
+  .cyb-new-hero__button-arrow {
+    font-size: 16px;
+  }
+
+
+  /* ==========================================================
+    RIGHT PANEL
+  ========================================================== */
+
+  .cyb-new-hero__right {
+    width: 100%;
+
+    padding-left: 35px;
+
+    border-left:
+      1px solid rgba(255,255,255,0.1);
+
+    box-sizing: border-box;
+  }
+
+
+  /* ==========================================================
+    ESTABLISHED
+  ========================================================== */
+
+  .cyb-new-hero__est {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 25px;
+  }
+
+
+  .cyb-new-hero__est span {
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.2em;
+
+    color: rgba(255,255,255,0.3);
+  }
+
+
+  .cyb-new-hero__est strong {
+    margin-top: 4px;
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 42px;
+
+    font-weight: 300;
+
+    color: rgba(255,255,255,0.68);
+  }
+
+
+  /* ==========================================================
+    SYSTEM CARD
+  ========================================================== */
+
+  .cyb-new-hero__system {
+    width: 100%;
+
+    border:
+      1px solid rgba(255,255,255,0.13);
+
+    background:
+      rgba(255,255,255,0.015);
+
+    padding: 22px;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ==========================================================
+    SYSTEM HEADER
+  ========================================================== */
+
+  .cyb-new-hero__system-header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 18px;
+
+    border-bottom:
+      1px solid rgba(255,255,255,0.1);
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.16em;
+
+    color: rgba(255,255,255,0.38);
+  }
+
+
+  /* ==========================================================
+    STATUS
+  ========================================================== */
+
+  .cyb-new-hero__status {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 20px 0;
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.14em;
+
+    color: rgba(255,255,255,0.72);
+  }
+
+
+  .cyb-new-hero__status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #fff;
+  }
+
+
+  /* ==========================================================
+    SYSTEM DATA
+  ========================================================== */
+
+  .cyb-new-hero__system-grid {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 12px;
+
+    padding-top: 18px;
+
+    border-top:
+      1px solid rgba(255,255,255,0.08);
+  }
+
+
+  .cyb-new-hero__system-grid div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+
+  .cyb-new-hero__system-grid span {
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 8px;
+
+    color: rgba(255,255,255,0.25);
+  }
+
+
+  .cyb-new-hero__system-grid strong {
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    color: rgba(255,255,255,0.65);
+
+    white-space: nowrap;
+  }
+
+
+  /* ==========================================================
+    TECH INFO
+  ========================================================== */
+
+  .cyb-new-hero__technical {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 18px;
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.12em;
+
+    color: rgba(255,255,255,0.2);
+  }
+
+
+  /* ==========================================================
+    SIDE LABELS
+    REDUCED — THESE WERE MAKING THE HERO MESSY
+  ========================================================== */
+
+  .cyb-new-hero__side {
+    display: none;
+  }
+
+
+  /* ==========================================================
+    BOTTOM BAR
+  ========================================================== */
+
+  .cyb-new-hero__bottom {
+    position: relative;
+    z-index: 5;
+
+    width: calc(100% - 8vw);
+
+    min-height: 48px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-top:
+      1px solid rgba(255,255,255,0.1);
+
+    font-family:
+      "IBM Plex Mono",
+      "Courier New",
+      monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.13em;
+
+    color: rgba(255,255,255,0.22);
+  }
+
+
+  /* ==========================================================
+    SCROLL BUTTON
+  ========================================================== */
+
+  .cyb-new-hero__scroll {
+    position: absolute;
+
+    right: 4vw;
+    bottom: 70px;
+
+    z-index: 10;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+      1px solid rgba(255,255,255,0.14);
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.015);
+
+    color: rgba(255,255,255,0.7);
+
+    cursor: pointer;
+
+    transition:
+      transform 0.25s ease,
+      background 0.25s ease;
+  }
+
+
+  .cyb-new-hero__scroll:hover {
+    transform: translateY(3px);
+
+    background:
+      rgba(255,255,255,0.06);
+  }
+
+
+  /* ==========================================================
+    TABLET
+  ========================================================== */
+
+  @media (max-width: 1000px) {
+
+    .cyb-new-hero__main {
+      grid-template-columns: 1fr;
+
+      gap: 45px;
+    }
+
+    .cyb-new-hero__right {
+      max-width: 520px;
+
+      border-left: none;
+
+      border-top:
+        1px solid rgba(255,255,255,0.1);
+
+      padding:
+        30px 0 0;
+    }
+
+  }
+
+
+  /* ==========================================================
+    MOBILE
+  ========================================================== */
+
+  @media (max-width: 650px) {
+
+    .cyb-new-hero {
+      padding: 0 18px;
+    }
+
+
+    .cyb-new-hero__top {
+      width: 100%;
+      height: 70px;
+    }
+
+
+    .cyb-new-hero__top-right {
+      display: none;
+    }
+
+
+    .cyb-new-hero__main {
+      width: 100%;
+
+      padding:
+        50px 0 40px;
+
+      gap: 40px;
+    }
+
+
+    .cyb-new-hero__location {
+      margin-bottom: 20px;
+    }
+
+
+    /*
+      Keep CYBERONITES on ONE line.
+    */
+
+    .cyb-new-hero__title {
+      font-size: 13vw;
+
+      letter-spacing: -0.065em;
+
+      white-space: nowrap;
+    }
+
+
+    .cyb-new-hero__title-outline {
+      -webkit-text-stroke-width: 1px;
+    }
+
+
+    .cyb-new-hero__line {
+      width: 100%;
+
+      margin-top: 25px;
+    }
+
+
+    .cyb-new-hero__intro {
+      grid-template-columns: 30px 1fr;
+
+      gap: 10px;
+
+      margin-top: 20px;
+    }
+
+
+    .cyb-new-hero__intro p {
+      font-size: 14px;
+
+      line-height: 1.65;
+    }
+
+
+    .cyb-new-hero__actions {
+      flex-wrap: wrap;
+
+      margin-top: 28px;
+    }
+
+
+    .cyb-new-hero__button {
+      height: 48px;
+
+      padding: 0 18px;
+
+      font-size: 11px;
+    }
+
+
+    .cyb-new-hero__right {
+      display: none;
+    }
+
+
+    .cyb-new-hero__bottom {
+      width: 100%;
+    }
+
+
+    .cyb-new-hero__bottom span:nth-child(2) {
+      display: none;
+    }
+
+
+    .cyb-new-hero__scroll {
+      width: 40px;
+      height: 40px;
+
+      right: 18px;
+      bottom: 60px;
+    }
+
+  }
+
+
+  /* ==========================================================
+    SMALL MOBILE
+  ========================================================== */
+
+  @media (max-width: 400px) {
+
+    .cyb-new-hero__title {
+      font-size: 12.5vw;
+    }
+
+    .cyb-new-hero__actions {
+      gap: 8px;
+    }
+
+    .cyb-new-hero__button {
+      min-width: 145px;
+    }
+
+  }

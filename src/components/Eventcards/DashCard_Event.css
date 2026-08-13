@@ -1,0 +1,649 @@
+/* ==========================================================
+   CYBERONITES — GRAND EVENTS
+   TECHNICAL EDITORIAL THEME
+========================================================== */
+
+:root {
+  --event-bg: #050505;
+  --event-white: #eeeeee;
+  --event-muted: rgba(255, 255, 255, 0.45);
+  --event-dim: rgba(255, 255, 255, 0.22);
+  --event-line: rgba(255, 255, 255, 0.11);
+  --event-grid: rgba(255, 255, 255, 0.035);
+
+  --event-mono:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+}
+
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.event-highlight {
+  position: relative;
+
+  width: 100%;
+  min-height: 650px;
+
+  padding: 0 4vw;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--event-bg);
+
+  color: var(--event-white);
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.event-highlight__grid {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--event-grid) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--event-grid) 1px,
+      transparent 1px
+    );
+
+  background-size: 76px 76px;
+}
+
+
+/* ==========================================================
+   TOP BORDER
+========================================================== */
+
+.event-highlight::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 4vw;
+  right: 4vw;
+
+  height: 1px;
+
+  background: var(--event-line);
+}
+
+
+/* ==========================================================
+   TOP
+========================================================== */
+
+.event-highlight__top {
+  position: relative;
+
+  z-index: 2;
+
+  height: 105px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--event-line);
+}
+
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.event-highlight__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 0;
+
+  font-family: var(--event-mono);
+
+  font-size: 30px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--event-muted);
+}
+
+
+.event-highlight__number {
+  color: var(--event-white);
+}
+
+
+.event-highlight__line {
+  width: 42px;
+
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.event-highlight__status {
+  font-family: var(--event-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  color: var(--event-dim);
+}
+
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+.event-highlight__content {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns: 80px 1fr 280px;
+
+  gap: 30px;
+
+  padding:
+
+    80px
+
+    3vw
+
+    95px;
+}
+
+
+/* ==========================================================
+   INDEX
+========================================================== */
+
+.event-highlight__index {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  padding-top: 10px;
+
+  font-family: var(--event-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.14em;
+
+  color: var(--event-dim);
+}
+
+
+.event-highlight__index span:first-child {
+  color: var(--event-white);
+}
+
+
+/* ==========================================================
+   MAIN
+========================================================== */
+
+.event-highlight__main {
+  max-width: 760px;
+}
+
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.event-highlight__label {
+  margin: 0 0 25px;
+
+  font-family: var(--event-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--event-muted);
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.event-highlight__title {
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(70px, 9vw, 145px);
+
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+
+  text-transform: uppercase;
+}
+
+
+.event-highlight__title span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.42);
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.event-highlight__description {
+  max-width: 610px;
+
+  margin:
+
+    42px
+
+    0
+
+    34px;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.46);
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.event-highlight__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 35px;
+
+  min-width: 190px;
+
+  padding: 15px 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  background: #eeeeee;
+
+  color: #050505;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.event-highlight__button:hover {
+  background: transparent;
+
+  color: #eeeeee;
+
+  transform: translateY(-2px);
+}
+
+
+.event-highlight__button-arrow {
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+
+/* ==========================================================
+   TECHNICAL PANEL
+========================================================== */
+
+.event-highlight__panel {
+  align-self: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  padding: 25px;
+
+  min-height: 245px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.015);
+}
+
+
+/* ==========================================================
+   PANEL HEADER
+========================================================== */
+
+.event-highlight__panel-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid var(--event-line);
+
+  font-family: var(--event-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: var(--event-dim);
+}
+
+
+/* ==========================================================
+   PANEL STATUS
+========================================================== */
+
+.event-highlight__panel-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 25px 0;
+
+  font-family: var(--event-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255,255,255,0.65);
+}
+
+
+.event-highlight__status-dot {
+  width: 6px;
+
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #eeeeee;
+}
+
+
+/* ==========================================================
+   PANEL ROW
+========================================================== */
+
+.event-highlight__panel-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 13px 0;
+
+  border-top: 1px solid rgba(255,255,255,0.07);
+
+  font-family: var(--event-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.12em;
+
+  color: rgba(255,255,255,0.25);
+}
+
+
+.event-highlight__panel-row strong {
+  font-weight: 400;
+
+  color: rgba(255,255,255,0.62);
+}
+
+
+/* ==========================================================
+   BOTTOM
+========================================================== */
+
+.event-highlight__bottom {
+  position: absolute;
+
+  left: 4vw;
+  right: 4vw;
+
+  bottom: 25px;
+
+  z-index: 3;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 16px;
+
+  border-top: 1px solid var(--event-line);
+
+  font-family: var(--event-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(255,255,255,0.22);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+
+  .event-highlight {
+    min-height: 700px;
+  }
+
+  .event-highlight__content {
+    grid-template-columns: 60px 1fr;
+
+    padding:
+
+      70px
+
+      2vw
+
+      110px;
+  }
+
+  .event-highlight__panel {
+    display: none;
+  }
+
+  .event-highlight__title {
+    font-size: clamp(70px, 12vw, 120px);
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .event-highlight {
+    min-height: 680px;
+
+    padding: 0 6vw;
+  }
+
+
+  .event-highlight__top {
+    height: 85px;
+  }
+
+
+  .event-highlight__status {
+    display: none;
+  }
+
+
+  .event-highlight__content {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    padding:
+
+      60px
+
+      0
+
+      110px;
+  }
+
+
+  .event-highlight__index {
+    flex-direction: row;
+
+    gap: 12px;
+  }
+
+
+  .event-highlight__title {
+    font-size: 20vw;
+
+    line-height: 0.85;
+  }
+
+
+  .event-highlight__description {
+    margin-top: 32px;
+
+    font-size: 13px;
+  }
+
+
+  .event-highlight__bottom {
+    left: 6vw;
+    right: 6vw;
+  }
+
+
+  .event-highlight__bottom span:nth-child(2) {
+    display: none;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .event-highlight__eyebrow {
+    font-size: 8px;
+
+    gap: 9px;
+  }
+
+
+  .event-highlight__line {
+    width: 25px;
+  }
+
+
+  .event-highlight__title {
+    font-size: 19vw;
+  }
+
+
+  .event-highlight__description {
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+
+  .event-highlight__button {
+    width: 100%;
+  }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .event-highlight__button {
+    transition: none;
+  }
+
+}

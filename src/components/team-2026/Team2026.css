@@ -1,0 +1,634 @@
+/* ==========================================================
+   TEAM 2026
+   CYBERONITES — MINIMAL / BOLD / CLASSIC
+========================================================== */
+
+.team2026 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding-top: 100px;
+
+  background: #050505;
+  color: #ffffff;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   BACKGROUND GRID
+========================================================== */
+
+.team2026__grid {
+  position: fixed;
+  inset: 0;
+
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 78px 78px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 75%,
+    transparent 100%
+  );
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.team2026__header {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 80px 40px 120px;
+
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.team2026__eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 42px;
+
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 0.2em;
+
+  color: #888888;
+}
+
+.team2026__line {
+  width: 38px;
+  height: 1px;
+
+  display: block;
+
+  background: #0e86b0;
+}
+
+/* ==========================================================
+   MAIN TITLE
+========================================================== */
+
+.team2026__title {
+  margin: 0;
+
+  text-align: center;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: clamp(4rem, 9vw, 9rem);
+
+  font-weight: 900;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.055em;
+
+  color: #ffffff;
+}
+
+.team2026__title span {
+  color: #8d8d8d;
+}
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+.team2026__intro {
+  max-width: 760px;
+
+  margin: 50px auto 30px;
+
+  text-align: center;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+
+  line-height: 1.7;
+
+  color: #929292;
+}
+
+/* ==========================================================
+   META
+========================================================== */
+
+.team2026__meta {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
+
+  color: #555555;
+}
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.team2026__section {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 90px 40px 120px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-sizing: border-box;
+}
+
+/* ==========================================================
+   SECTION HEADER
+========================================================== */
+
+.team2026__section-header {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(250px, 420px);
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 70px;
+
+  text-align: center;
+}
+
+.team2026__section-header > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================
+   SECTION NUMBER
+========================================================== */
+
+.team2026__number {
+  margin: 0 0 20px;
+
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.2em;
+
+  color: #0e86b0;
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.team2026__section-header h2 {
+  margin: 0;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  font-weight: 900;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.05em;
+
+  color: #ffffff;
+}
+
+/* ==========================================================
+   SECTION DESCRIPTION
+========================================================== */
+
+.team2026__section-description {
+  max-width: 400px;
+
+  margin: 0 auto;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  color: #777777;
+
+  text-align: center;
+}
+
+/* ==========================================================
+   TEAM GRID
+========================================================== */
+
+.team2026__gallery {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  column-gap: 28px;
+  row-gap: 70px;
+
+  justify-items: center;
+  align-items: start;
+}
+
+/* ==========================================================
+   GALLERY ITEM
+========================================================== */
+
+.team2026__gallery-item {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ==========================================================
+   TITLE CARD
+========================================================== */
+
+.team2026__gallery-item .title-card {
+  width: 100%;
+  max-width: 340px;
+}
+
+/*
+   If TitleCard does not have .title-card,
+   this still keeps the component centered.
+*/
+.team2026__gallery-item > * {
+  max-width: 100%;
+}
+
+/* ==========================================================
+   CENTER INCOMPLETE LAST ROW
+========================================================== */
+
+/*
+   1 card remaining
+
+   1  2  3
+      4
+*/
+
+.team2026__gallery-item:nth-child(3n + 1):last-child {
+  grid-column: 2;
+}
+
+/*
+   2 cards remaining
+
+   1  2  3
+     4  5
+*/
+
+.team2026__gallery-item:nth-child(3n + 1):nth-last-child(2) {
+  grid-column: 2;
+}
+
+.team2026__gallery-item:nth-child(3n + 2):last-child {
+  grid-column: 3;
+}
+
+/* ==========================================================
+   END SECTION
+========================================================== */
+
+.team2026__end {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  padding: 110px 40px 160px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.team2026__end p {
+  margin: 0 0 28px;
+
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 0.2em;
+
+  color: #0e86b0;
+}
+
+.team2026__end h2 {
+  margin: 0;
+
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: clamp(3.5rem, 8vw, 8rem);
+
+  font-weight: 900;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.055em;
+
+  color: #ffffff;
+}
+
+.team2026__end h2 span {
+  color: #777777;
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+
+  .team2026 {
+    padding-top: 80px;
+  }
+
+  .team2026__header {
+    padding: 65px 30px 100px;
+  }
+
+  .team2026__section {
+    padding: 75px 30px 100px;
+  }
+
+  .team2026__section-header {
+    grid-template-columns: 1fr;
+
+    gap: 28px;
+
+    margin-bottom: 60px;
+  }
+
+  .team2026__section-header > div {
+    align-items: center;
+  }
+
+  .team2026__gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 24px;
+    row-gap: 60px;
+
+    max-width: 800px;
+  }
+
+  /* One card left → center */
+
+  .team2026__gallery-item:nth-child(2n + 1):last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Reset the 3-column rules */
+  .team2026__gallery-item:nth-child(3n + 1):last-child,
+  .team2026__gallery-item:nth-child(3n + 1):nth-last-child(2),
+  .team2026__gallery-item:nth-child(3n + 2):last-child {
+    grid-column: auto;
+  }
+
+  /* Reapply 2-column final-row centering */
+  .team2026__gallery-item:nth-child(2n + 1):last-child {
+    grid-column: 1 / -1;
+  }
+
+  .team2026__end {
+    padding: 90px 30px 130px;
+  }
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+  .team2026 {
+    padding-top: 60px;
+  }
+
+  .team2026__grid {
+    background-size: 55px 55px;
+  }
+
+  .team2026__header {
+    padding: 50px 20px 80px;
+  }
+
+  .team2026__eyebrow {
+    margin-bottom: 30px;
+
+    font-size: 9px;
+
+    text-align: center;
+  }
+
+  .team2026__line {
+    width: 25px;
+  }
+
+  .team2026__title {
+    font-size: clamp(3.4rem, 16vw, 6rem);
+
+    line-height: 0.9;
+  }
+
+  .team2026__intro {
+    margin-top: 32px;
+
+    font-size: 0.95rem;
+
+    line-height: 1.65;
+  }
+
+  .team2026__meta {
+    font-size: 8px;
+
+    gap: 8px;
+  }
+
+  .team2026__section {
+    padding: 65px 20px 85px;
+  }
+
+  .team2026__section-header {
+    margin-bottom: 45px;
+
+    gap: 22px;
+  }
+
+  .team2026__number {
+    font-size: 9px;
+
+    margin-bottom: 16px;
+  }
+
+  .team2026__section-header h2 {
+    font-size: clamp(3rem, 14vw, 5rem);
+
+    line-height: 0.88;
+  }
+
+  .team2026__section-description {
+    max-width: 420px;
+
+    font-size: 0.9rem;
+
+    line-height: 1.65;
+  }
+
+  /* One column on mobile */
+
+  .team2026__gallery {
+    width: 100%;
+
+    max-width: 420px;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  /* Disable desktop centering rules */
+
+  .team2026__gallery-item:nth-child(3n + 1):last-child,
+  .team2026__gallery-item:nth-child(3n + 1):nth-last-child(2),
+  .team2026__gallery-item:nth-child(3n + 2):last-child,
+  .team2026__gallery-item:nth-child(2n + 1):last-child {
+    grid-column: auto;
+  }
+
+  .team2026__gallery-item {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .team2026__gallery-item .title-card {
+    max-width: 360px;
+  }
+
+  .team2026__end {
+    padding: 75px 20px 110px;
+  }
+
+  .team2026__end h2 {
+    font-size: clamp(3rem, 14vw, 5.5rem);
+  }
+}
+
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media (max-width: 420px) {
+
+  .team2026__header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .team2026__section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .team2026__title {
+    font-size: 3.2rem;
+  }
+
+  .team2026__intro {
+    font-size: 0.9rem;
+  }
+
+  .team2026__meta {
+    font-size: 7px;
+  }
+
+  .team2026__gallery {
+    gap: 48px;
+  }
+
+  .team2026__section-header h2 {
+    font-size: 3rem;
+  }
+
+  .team2026__end {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

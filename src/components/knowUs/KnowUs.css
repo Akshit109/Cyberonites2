@@ -1,0 +1,831 @@
+/* ==========================================================
+   CYBERONITES — ABOUT / KNOW US
+   EDITORIAL SYSTEM DESIGN
+========================================================== */
+
+:root {
+  --know-bg: #000000;
+  --know-white: #eeeeee;
+  --know-muted: rgba(255, 255, 255, 0.42);
+  --know-dim: rgba(255, 255, 255, 0.20);
+  --know-line: rgba(255, 255, 255, 0.11);
+  --know-grid: rgba(255, 255, 255, 0.035);
+
+  --know-mono:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+}
+
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.know-us {
+  position: relative;
+
+  width: 100%;
+  min-height: 760px;
+
+  padding: 0 4vw;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: var(--know-bg);
+
+  color: var(--know-white);
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.know-us__grid {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--know-grid) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--know-grid) 1px,
+      transparent 1px
+    );
+
+  background-size: 76px 76px;
+}
+
+
+/* ==========================================================
+   TOP BORDER
+========================================================== */
+
+.know-us::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 4vw;
+  right: 4vw;
+
+  height: 1px;
+
+  background: var(--know-line);
+}
+
+
+/* ==========================================================
+   TOP BAR
+========================================================== */
+
+.know-us__top {
+  position: relative;
+
+  z-index: 2;
+
+  height: 120px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid var(--know-line);
+}
+
+
+/* ==========================================================
+   SECTION ID
+========================================================== */
+
+.know-us__section-id {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: var(--know-mono);
+
+  font-size: 30px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--know-muted);
+}
+
+
+.know-us__section-id span:first-child {
+  color: var(--know-white);
+}
+
+
+.know-us__section-id i {
+  display: block;
+
+  width: 42px;
+
+  height: 1px;
+
+  background: rgba(255,255,255,0.3);
+}
+
+
+/* ==========================================================
+   STATUS
+========================================================== */
+
+.know-us__status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-family: var(--know-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(255,255,255,0.28);
+}
+
+
+.know-us__status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #eeeeee;
+}
+
+
+/* ==========================================================
+   MAIN LAYOUT
+========================================================== */
+
+.know-us__layout {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(350px, 0.85fr)
+    minmax(500px, 1.15fr);
+
+  gap: 9vw;
+
+  padding:
+
+    95px
+
+    5vw
+
+    110px
+
+    2vw;
+}
+
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+.know-us__intro {
+  position: relative;
+
+  padding-top: 20px;
+}
+
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.know-us__eyebrow {
+  margin: 0 0 32px;
+
+  font-family: var(--know-mono);
+
+  font-size: 10px;
+
+  letter-spacing: 0.18em;
+
+  color: var(--know-muted);
+}
+
+
+.know-us__eyebrow::before {
+  content: "●";
+
+  margin-right: 10px;
+
+  color: rgba(255,255,255,0.7);
+
+  font-size: 7px;
+}
+
+
+/* ==========================================================
+   BIG HEADING
+========================================================== */
+
+.know-us__heading {
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(70px, 8vw, 130px);
+
+  font-weight: 800;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+
+  text-transform: uppercase;
+
+  color: var(--know-white);
+}
+
+
+.know-us__heading span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255,255,255,0.38);
+}
+
+
+/* ==========================================================
+   INTRO TEXT
+========================================================== */
+
+.know-us__intro-text {
+  max-width: 390px;
+
+  margin:
+
+    48px
+
+    0
+
+    0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+
+  color: rgba(255,255,255,0.46);
+}
+
+
+/* ==========================================================
+   COORDINATES
+========================================================== */
+
+.know-us__coordinates {
+  display: flex;
+
+  gap: 22px;
+
+  margin-top: 50px;
+
+  font-family: var(--know-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.13em;
+
+  color: rgba(255,255,255,0.23);
+}
+
+
+/* ==========================================================
+   SYSTEM
+========================================================== */
+
+.know-us__system {
+  width: 100%;
+}
+
+
+/* ==========================================================
+   SYSTEM HEADER
+========================================================== */
+
+.know-us__system-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding:
+
+    0
+
+    0
+
+    18px;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.18);
+
+  font-family: var(--know-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.15em;
+
+  color: rgba(255,255,255,0.32);
+}
+
+
+/* ==========================================================
+   LIST
+========================================================== */
+
+.know-us__list {
+  border-bottom:
+    1px solid var(--know-line);
+}
+
+
+/* ==========================================================
+   ITEM
+========================================================== */
+
+.know-us__item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  min-height: 130px;
+
+  padding: 28px 0;
+
+  box-sizing: border-box;
+
+  border-bottom:
+    1px solid var(--know-line);
+
+  cursor: default;
+
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease;
+}
+
+
+.know-us__item:last-child {
+  border-bottom: none;
+}
+
+
+/* ==========================================================
+   ACTIVE
+========================================================== */
+
+.know-us__item--active {
+  background:
+    rgba(255,255,255,0.025);
+
+  padding-left: 18px;
+}
+
+
+/* ==========================================================
+   NUMBER
+========================================================== */
+
+.know-us__number {
+  font-family: var(--know-mono);
+
+  font-size: 11px;
+
+  letter-spacing: 0.1em;
+
+  color: rgba(255,255,255,0.28);
+
+  padding-top: 4px;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.know-us__item--active
+.know-us__number {
+  color: var(--know-white);
+}
+
+
+/* ==========================================================
+   DETAILS
+========================================================== */
+
+.know-us__details {
+  padding-right: 20px;
+}
+
+
+/* ==========================================================
+   ITEM TOP
+========================================================== */
+
+.know-us__item-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.know-us__item h3 {
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+
+  color: rgba(255,255,255,0.58);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.know-us__item--active h3 {
+  color: var(--know-white);
+}
+
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.know-us__item p {
+  max-width: 620px;
+
+  margin:
+
+    15px
+
+    0
+
+    0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  color: rgba(255,255,255,0.32);
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.know-us__item--active p {
+  color: rgba(255,255,255,0.52);
+}
+
+
+/* ==========================================================
+   ARROW
+========================================================== */
+
+.know-us__arrow {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  border:
+    1px solid rgba(255,255,255,0.12);
+
+  border-radius: 50%;
+
+  font-size: 13px;
+
+  color: rgba(255,255,255,0.25);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.know-us__item--active
+.know-us__arrow {
+  color: var(--know-white);
+
+  border-color:
+    rgba(255,255,255,0.35);
+
+  transform: rotate(0deg);
+}
+
+
+/* ==========================================================
+   LEFT ACTIVE MARKER
+========================================================== */
+
+.know-us__item--active::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+  bottom: 0;
+
+  width: 2px;
+
+  background: rgba(255,255,255,0.75);
+}
+
+
+/* ==========================================================
+   BOTTOM
+========================================================== */
+
+.know-us__bottom {
+  position: absolute;
+
+  left: 4vw;
+  right: 4vw;
+
+  bottom: 30px;
+
+  z-index: 3;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 18px;
+
+  border-top:
+    1px solid var(--know-line);
+
+  font-family: var(--know-mono);
+
+  font-size: 8px;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(255,255,255,0.22);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1000px) {
+
+  .know-us {
+    min-height: auto;
+  }
+
+
+  .know-us__layout {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+
+    padding-bottom: 130px;
+  }
+
+
+  .know-us__heading {
+    font-size: clamp(70px, 13vw, 110px);
+  }
+
+
+  .know-us__intro-text {
+    max-width: 600px;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .know-us {
+    padding: 0 6vw;
+  }
+
+
+  .know-us__top {
+    height: 90px;
+  }
+
+
+  .know-us__status {
+    display: none;
+  }
+
+
+  .know-us__layout {
+    padding:
+
+      65px
+
+      0
+
+      100px;
+  }
+
+
+  .know-us__heading {
+    font-size: 20vw;
+
+    line-height: 0.84;
+  }
+
+
+  .know-us__intro-text {
+    margin-top: 35px;
+
+    font-size: 14px;
+  }
+
+
+  .know-us__coordinates {
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+    gap: 12px;
+  }
+
+
+  .know-us__item {
+    grid-template-columns: 45px 1fr;
+
+    min-height: auto;
+
+    padding: 24px 0;
+  }
+
+
+  .know-us__item--active {
+    padding-left: 12px;
+  }
+
+
+  .know-us__item h3 {
+    font-size: 15px;
+  }
+
+
+  .know-us__item p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+
+  .know-us__arrow {
+    width: 25px;
+    height: 25px;
+
+    font-size: 11px;
+  }
+
+
+  .know-us__bottom {
+    left: 6vw;
+    right: 6vw;
+
+    bottom: 22px;
+  }
+
+
+  .know-us__bottom span:nth-child(2) {
+    display: none;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .know-us__section-id {
+    font-size: 8px;
+
+    gap: 9px;
+  }
+
+
+  .know-us__section-id i {
+    width: 25px;
+  }
+
+
+  .know-us__eyebrow {
+    font-size: 8px;
+  }
+
+
+  .know-us__heading {
+    font-size: 19vw;
+  }
+
+
+  .know-us__item {
+    grid-template-columns: 36px 1fr;
+  }
+
+
+  .know-us__item h3 {
+    font-size: 14px;
+  }
+
+
+  .know-us__item p {
+    font-size: 11px;
+  }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .know-us__item,
+  .know-us__item h3,
+  .know-us__item p,
+  .know-us__arrow,
+  .know-us__number {
+    transition: none;
+  }
+
+}

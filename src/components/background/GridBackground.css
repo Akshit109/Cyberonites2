@@ -1,0 +1,142 @@
+/* ==========================================================
+   CYBERONITES GRID BACKGROUND
+   Black + Subtle Grey Grid
+========================================================== */
+
+.grid-background {
+  position: relative;
+
+  width: 100%;
+  min-height: 100%;
+
+  background: #000000;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.grid-background__grid {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 78px 78px;
+
+  z-index: 0;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.grid-background__content {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  min-height: 100%;
+}
+
+
+/* ==========================================================
+   OPTIONAL SUBTLE CENTER FADE
+========================================================== */
+
+.grid-background::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.15) 70%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+
+  z-index: 2;
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+  .grid-background__grid {
+    background-size: 68px 68px;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+  .grid-background__grid {
+    background-size: 60px 60px;
+
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.04) 1px,
+        transparent 1px
+      );
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+  .grid-background__grid {
+    background-size: 52px 52px;
+  }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .grid-background {
+    scroll-behavior: auto;
+  }
+}

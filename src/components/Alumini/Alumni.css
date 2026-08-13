@@ -1,0 +1,772 @@
+/* ==========================================================
+   CYBERONITES — ALUMNI SECTION
+   NEW EDITORIAL / SYSTEM THEME
+========================================================== */
+
+:root {
+  --alumni-bg: #000000;
+  --alumni-white: #eeeeee;
+  --alumni-muted: rgba(255, 255, 255, 0.42);
+  --alumni-dim: rgba(255, 255, 255, 0.20);
+  --alumni-line: rgba(255, 255, 255, 0.11);
+  --alumni-grid: rgba(255, 255, 255, 0.035);
+
+  --alumni-mono:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+}
+
+
+/* ==========================================================
+   SECTION
+========================================================== */
+
+.alumni {
+  position: relative;
+
+  width: 100%;
+  height: 430px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: var(--alumni-bg);
+  color: var(--alumni-white);
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.alumni__grid {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      var(--alumni-grid) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--alumni-grid) 1px,
+      transparent 1px
+    );
+
+  background-size: 76px 76px;
+}
+
+
+/* ==========================================================
+   TOP BORDER
+========================================================== */
+
+.alumni::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 4vw;
+  right: 4vw;
+
+  height: 1px;
+
+  background: var(--alumni-line);
+
+  z-index: 10;
+}
+
+
+/* ==========================================================
+   BOTTOM BORDER
+========================================================== */
+
+.alumni::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  left: 4vw;
+  right: 4vw;
+
+  height: 1px;
+
+  background: var(--alumni-line);
+
+  z-index: 10;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.alumni__label {
+  position: absolute;
+
+  top: 48px;
+  left: 4vw;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  font-family: var(--alumni-mono);
+
+  font-size: 30px;
+  font-weight: 400;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+
+  color: var(--alumni-muted);
+}
+
+
+/* ==========================================================
+   HEADER LINE
+========================================================== */
+
+.alumni__label-line {
+  width: 45px;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.32);
+}
+
+
+/* ==========================================================
+   SECTION NUMBER
+========================================================== */
+
+.alumni__label::before {
+  content: "02";
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ==========================================================
+   LARGE TITLE
+   Add this element in JSX if you want:
+   <h2 className="alumni__title">ALUMNI.</h2>
+========================================================== */
+
+.alumni__title {
+  position: absolute;
+
+  left: 4vw;
+  bottom: 235px;
+
+  z-index: 3;
+
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: clamp(55px, 7vw, 105px);
+
+  line-height: 0.9;
+
+  font-weight: 800;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+
+  color: var(--alumni-white);
+}
+
+
+.alumni__title span {
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(255, 255, 255, 0.35);
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   Optional JSX element:
+   <p className="alumni__description">...</p>
+========================================================== */
+
+.alumni__description {
+  position: absolute;
+
+  right: 4vw;
+  bottom: 245px;
+
+  width: min(360px, 30vw);
+
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  color: rgba(255, 255, 255, 0.38);
+}
+
+
+/* ==========================================================
+   MARQUEE AREA
+========================================================== */
+
+.alumni__strip-wrapper {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 205px;
+
+  width: 100%;
+
+  z-index: 4;
+
+  transform: none;
+}
+
+
+/* ==========================================================
+   LOGO STRIP
+========================================================== */
+
+.alumni__strip {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  padding: 26px 0;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.12);
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* ==========================================================
+   TOP INNER LINE
+========================================================== */
+
+.alumni__strip::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 4vw;
+  right: 4vw;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.18),
+      transparent
+    );
+}
+
+
+/* ==========================================================
+   TRACK
+========================================================== */
+
+.alumni__track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+  min-width: max-content;
+
+  will-change: transform;
+
+  animation:
+    alumni-scroll
+    34s
+    linear
+    infinite;
+}
+
+
+/* ==========================================================
+   LOGO ITEM
+========================================================== */
+
+.alumni__item {
+  position: relative;
+
+  flex: 0 0 auto;
+
+  width: 190px;
+  height: 65px;
+
+  padding: 0 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  opacity: 0.65;
+
+  transition:
+    opacity 0.3s ease;
+}
+
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.alumni__logo {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 135px;
+  max-height: 45px;
+
+  object-fit: contain;
+
+  filter:
+    grayscale(100%)
+    brightness(1.5);
+
+  opacity: 0.7;
+
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.alumni__item:hover {
+  opacity: 1;
+}
+
+
+.alumni__item:hover .alumni__logo {
+  filter:
+  
+    brightness(1);
+
+  opacity: 1;
+
+  transform: scale(1.04);
+}
+
+
+/* ==========================================================
+   VERTICAL SEPARATOR
+========================================================== */
+
+.alumni__separator {
+  flex: 0 0 auto;
+
+  width: 1px;
+  height: 24px;
+
+  margin: 0 8px;
+
+  background: rgba(255,255,255,0.14);
+
+  font-size: 0;
+
+  user-select: none;
+}
+
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes alumni-scroll {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+}
+
+
+/* ==========================================================
+   PAUSE ON HOVER
+========================================================== */
+
+.alumni__strip-wrapper:hover
+.alumni__track {
+  animation-play-state: paused;
+}
+
+
+/* ==========================================================
+   LOWER INFORMATION
+========================================================== */
+
+.alumni__meta {
+  position: absolute;
+
+  left: 4vw;
+  right: 4vw;
+  bottom: 45px;
+
+  z-index: 5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: var(--alumni-mono);
+
+  font-size: 9px;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,0.22);
+}
+
+
+/* ==========================================================
+   META ACTIVE
+========================================================== */
+
+.alumni__meta strong {
+  color: rgba(255,255,255,0.5);
+
+  font-weight: 400;
+}
+
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+.alumni__item:focus-visible {
+  outline: 1px solid #ffffff;
+
+  outline-offset: 5px;
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+  .alumni {
+    height: 390px;
+  }
+
+  .alumni__label {
+    top: 40px;
+  }
+
+  .alumni__title {
+    bottom: 220px;
+  }
+
+  .alumni__description {
+    bottom: 225px;
+
+    width: 280px;
+  }
+
+  .alumni__strip-wrapper {
+    top: 205px;
+  }
+
+  .alumni__strip {
+    padding: 22px 0;
+  }
+
+  .alumni__track {
+    animation-duration: 30s;
+  }
+
+  .alumni__item {
+    width: 160px;
+
+    height: 58px;
+
+    padding: 0 22px;
+  }
+
+  .alumni__logo {
+    max-width: 115px;
+    max-height: 40px;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+  .alumni {
+    height: 330px;
+  }
+
+  .alumni__grid {
+    background-size: 58px 58px;
+  }
+
+
+  .alumni__label {
+    top: 30px;
+    left: 6vw;
+
+    font-size: 8px;
+
+    letter-spacing: 0.14em;
+  }
+
+
+  .alumni__label-line {
+    width: 25px;
+  }
+
+
+  .alumni__title {
+    left: 6vw;
+    bottom: 205px;
+
+    font-size: clamp(48px, 13vw, 76px);
+  }
+
+
+  .alumni__description {
+    display: none;
+  }
+
+
+  .alumni__strip-wrapper {
+    top: 150px;
+  }
+
+
+  .alumni__strip {
+    padding: 20px 0;
+  }
+
+
+  .alumni__track {
+    animation-duration: 27s;
+  }
+
+
+  .alumni__item {
+    width: 135px;
+
+    height: 50px;
+
+    padding: 0 16px;
+  }
+
+
+  .alumni__logo {
+    max-width: 95px;
+    max-height: 36px;
+  }
+
+
+  .alumni__separator {
+    height: 20px;
+
+    margin: 0 4px;
+  }
+
+
+  .alumni__meta {
+    left: 6vw;
+    right: 6vw;
+
+    bottom: 28px;
+
+    font-size: 8px;
+  }
+
+
+  .alumni__meta span:nth-child(2) {
+    display: none;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .alumni {
+    height: 300px;
+  }
+
+
+  .alumni__grid {
+    background-size: 50px 50px;
+  }
+
+
+  .alumni__label {
+    top: 25px;
+
+    font-size: 7px;
+  }
+
+
+  .alumni__title {
+    bottom: 190px;
+
+    font-size: 14vw;
+  }
+
+
+  .alumni__strip-wrapper {
+    top: 135px;
+  }
+
+
+  .alumni__strip {
+    padding: 17px 0;
+  }
+
+
+  .alumni__track {
+    animation-duration: 24s;
+  }
+
+
+  .alumni__item {
+    width: 115px;
+
+    height: 44px;
+
+    padding: 0 12px;
+  }
+
+
+  .alumni__logo {
+    max-width: 82px;
+    max-height: 32px;
+  }
+
+
+  .alumni__separator {
+    height: 17px;
+  }
+
+
+  .alumni__meta {
+    bottom: 24px;
+  }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL
+========================================================== */
+
+@media (max-width: 360px) {
+
+  .alumni {
+    height: 280px;
+  }
+
+
+  .alumni__title {
+    bottom: 180px;
+  }
+
+
+  .alumni__strip-wrapper {
+    top: 125px;
+  }
+
+
+  .alumni__item {
+    width: 105px;
+
+    height: 40px;
+  }
+
+
+  .alumni__logo {
+    max-width: 75px;
+    max-height: 29px;
+  }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .alumni__track {
+    animation: none;
+  }
+
+  .alumni__logo,
+  .alumni__item {
+    transition: none;
+  }
+
+}

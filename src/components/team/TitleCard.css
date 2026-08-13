@@ -1,0 +1,465 @@
+/* ==========================================================
+   CYBERONITES TEAM CARD
+   Black / White / Grey / Ocean Blue
+   ========================================================== */
+
+:root {
+  --card-black: #050505;
+  --card-white: #ffffff;
+  --card-muted: #8a8a8a;
+  --card-gray: #222222;
+  --card-border: #2a2a2a;
+  --card-ocean: #0e86b0;
+}
+
+
+/* ==========================================================
+   CARD
+   ========================================================== */
+
+.title-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 360px;
+
+  min-height: 460px;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: var(--card-black);
+
+  border: 1px solid var(--card-border);
+
+  color: var(--card-white);
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* ==========================================================
+   TECHNICAL GRID INSIDE CARD
+   ========================================================== */
+
+.title-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+
+  z-index: 0;
+}
+
+
+/* ==========================================================
+   TOP BLUE LINE
+   ========================================================== */
+
+.title-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+
+  background: var(--card-ocean);
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+
+  z-index: 5;
+}
+
+
+/* ==========================================================
+   HOVER
+   ========================================================== */
+
+.title-card:hover {
+  border-color: rgba(14, 134, 176, 0.7);
+
+  transform: translateY(-6px);
+}
+
+.title-card:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* ==========================================================
+   IMAGE WRAPPER
+   ========================================================== */
+
+.title-card__image-wrap {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  height: 285px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #080808;
+
+  border-bottom: 1px solid var(--card-border);
+}
+
+
+/* ==========================================================
+   IMAGE
+   ========================================================== */
+
+.title-card__image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  filter: grayscale(100%);
+
+  opacity: 0.92;
+
+  transition:
+    filter 0.4s ease,
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+
+.title-card:hover .title-card__image {
+  filter: grayscale(0%);
+
+  opacity: 1;
+
+  transform: scale(1.03);
+}
+
+
+/* ==========================================================
+   IMAGE PLACEHOLDER
+   ========================================================== */
+
+.title-card__placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 3rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  color: var(--card-ocean);
+
+  background: #080808;
+}
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.title-card__content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 22px 24px 24px;
+
+  background: var(--card-black);
+}
+
+
+/* ==========================================================
+   PROFILE LABEL
+   ========================================================== */
+
+.title-card__profile {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  color: #666666;
+}
+
+
+/* ==========================================================
+   NAME
+   ========================================================== */
+
+.title-card__name {
+  margin: 0 0 7px;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 1.45rem;
+
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  color: var(--card-white);
+}
+
+
+/* ==========================================================
+   ROLE
+   ========================================================== */
+
+.title-card__role {
+  margin: 0;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.72rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  color: var(--card-ocean);
+}
+
+
+/* ==========================================================
+   SOCIAL
+   ========================================================== */
+
+.title-card__social {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid var(--card-border);
+}
+
+
+/* ==========================================================
+   SOCIAL LINK
+   ========================================================== */
+
+.title-card__social-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  min-height: 32px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--card-border);
+
+  color: #999999;
+
+  text-decoration: none;
+
+  font-family:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 0.05em;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
+}
+
+
+.title-card__social-link svg {
+  font-size: 13px;
+}
+
+
+/* ==========================================================
+   SOCIAL HOVER
+   ========================================================== */
+
+.title-card__social-link:hover {
+  color: var(--card-white);
+
+  border-color: var(--card-ocean);
+
+  background: rgba(14, 134, 176, 0.08);
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+  .title-card {
+    max-width: 330px;
+
+    min-height: 440px;
+  }
+
+  .title-card__image-wrap {
+    height: 265px;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .title-card {
+    max-width: 100%;
+
+    width: 340px;
+
+    min-height: 420px;
+  }
+
+  .title-card__image-wrap {
+    height: 250px;
+  }
+
+  .title-card__content {
+    padding: 20px;
+  }
+
+  .title-card__name {
+    font-size: 1.3rem;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+  .title-card {
+    width: 100%;
+
+    min-height: 400px;
+  }
+
+  .title-card__image-wrap {
+    height: 230px;
+  }
+
+  .title-card__content {
+    padding: 18px;
+  }
+
+  .title-card__social {
+    gap: 7px;
+  }
+
+  .title-card__social-link {
+    flex: 1;
+
+    justify-content: center;
+
+    padding: 0 8px;
+  }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .title-card,
+  .title-card::after,
+  .title-card__image,
+  .title-card__social-link {
+    transition: none;
+  }
+
+}

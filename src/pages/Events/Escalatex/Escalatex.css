@@ -1,0 +1,1354 @@
+/* =========================================================
+   ESCALATEXX
+   CYBERONITES — CTF ARCHIVE
+   MINIMAL / EDITORIAL / CYBER
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --ex-black: #000000;
+  --ex-bg: #050505;
+  --ex-white: #ffffff;
+
+  --ex-muted: #9b9b9b;
+  --ex-dim: #666666;
+
+  --ex-blue: #0e86b0;
+  --ex-blue-light: #1aa5d0;
+
+  --ex-border: #242424;
+  --ex-border-light: #3a3a3a;
+
+  --ex-body: "Inter", Arial, sans-serif;
+  --ex-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.Escalatexx-page,
+.Escalatexx-page * {
+  box-sizing: border-box;
+}
+
+.Escalatexx-page {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: var(--ex-black);
+  color: var(--ex-white);
+
+  font-family: var(--ex-body);
+
+  overflow-x: hidden;
+}
+
+.Escalatexx-page h1,
+.Escalatexx-page h2,
+.Escalatexx-page h3,
+.Escalatexx-page h4,
+.Escalatexx-page p {
+  margin-top: 0;
+}
+
+.Escalatexx-page button {
+  font-family: inherit;
+}
+
+.Escalatexx-page img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.Escalatexx-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background: var(--ex-black);
+
+  border-bottom: 1px solid var(--ex-border);
+}
+
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
+
+.Escalatexx-hero__background {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  overflow: hidden;
+}
+
+.Escalatexx-hero__background img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+  opacity: 0.32;
+}
+
+.Escalatexx-hero__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.68);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.Escalatexx-header {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  padding: 1.5rem 6vw;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.Escalatexx-header__brand {
+  color: var(--ex-white);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+}
+
+.Escalatexx-header__search {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.12em;
+}
+
+.Escalatexx-header__search svg {
+  width: 16px;
+  height: 16px;
+
+  color: var(--ex-blue);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.Escalatexx-hero__content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1400px, 100%);
+
+  margin: auto;
+
+  padding: 6rem 6vw;
+
+  display: grid;
+
+  grid-template-columns: 0.75fr 1.5fr;
+
+  gap: 5rem;
+
+  align-items: end;
+}
+
+
+/* =========================================================
+   HERO QUOTE
+========================================================= */
+
+.Escalatexx-hero__quote {
+  max-width: 400px;
+
+  padding-left: 1.5rem;
+
+  border-left: 2px solid var(--ex-blue);
+}
+
+.Escalatexx-hero__quote p {
+  margin-bottom: 1.2rem;
+
+  color: var(--ex-white);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.85rem;
+
+  line-height: 1.8;
+
+  text-transform: uppercase;
+}
+
+.Escalatexx-hero__quote span {
+  color: var(--ex-blue);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   HERO HEADLINE
+========================================================= */
+
+.Escalatexx-hero__headline h1 {
+  margin: 0;
+
+  color: var(--ex-white);
+
+  font-size: clamp(4rem, 10vw, 10rem);
+
+  font-weight: 900;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.075em;
+}
+
+.Escalatexx-hero__headline p {
+  margin: 2rem 0;
+
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+.Escalatexx-hero__headline button {
+  padding: 0.9rem 1.5rem;
+
+  background: var(--ex-blue);
+
+  border: 1px solid var(--ex-blue);
+
+  color: var(--ex-black);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.Escalatexx-hero__headline button:hover {
+  background: transparent;
+
+  color: var(--ex-blue);
+}
+
+
+/* =========================================================
+   HERO SPECS
+========================================================= */
+
+.Escalatexx-hero__specs {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.Escalatexx-hero__specs span {
+  padding: 1rem 6vw;
+
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.Escalatexx-hero__specs span:last-child {
+  border-right: none;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.Escalatexx-content {
+  width: min(1400px, 100%);
+
+  margin: 0 auto;
+
+  padding: 0 6vw;
+}
+
+
+/* =========================================================
+   CHAMPIONS
+========================================================= */
+
+.Escalatexx-champions {
+  padding: 8rem 0;
+
+  border-bottom: 1px solid var(--ex-border);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.Escalatexx-section-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-bottom: 4rem;
+
+  padding-bottom: 1.5rem;
+
+  border-bottom: 1px solid var(--ex-border);
+}
+
+.Escalatexx-section-label {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--ex-blue);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.16em;
+}
+
+.Escalatexx-section-header h2 {
+  margin: 0;
+
+  color: var(--ex-white);
+
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+
+  font-weight: 800;
+
+  line-height: 0.9;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   WINNER NAVIGATION
+========================================================= */
+
+.Escalatexx-navigation {
+  display: flex;
+
+  gap: 0.5rem;
+}
+
+.Escalatexx-navigation button {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: 1px solid var(--ex-border-light);
+
+  color: var(--ex-white);
+
+  font-family: var(--ex-mono);
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.Escalatexx-navigation button:hover {
+  background: var(--ex-blue);
+
+  border-color: var(--ex-blue);
+
+  color: var(--ex-black);
+}
+
+
+/* =========================================================
+   WINNER GRID
+========================================================= */
+
+.Escalatexx-winners-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 1.5rem;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   WINNER CARD
+========================================================= */
+
+.winner-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+
+  background: var(--ex-bg);
+
+  border: 1px solid var(--ex-border);
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.winner-card:hover {
+  border-color: var(--ex-blue);
+
+  transform: translateY(-5px);
+}
+
+.winner-card--active {
+  border-color: var(--ex-blue);
+
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   WINNER RANK
+========================================================= */
+
+.winner-card__rank {
+  position: absolute;
+
+  top: 1rem;
+  right: 1rem;
+
+  z-index: 5;
+
+  color: var(--ex-blue);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   WINNER MAIN
+========================================================= */
+
+.winner-card__main {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   WINNER BADGE
+========================================================= */
+
+.winner-card__badge {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 1rem;
+
+  border-bottom: 1px solid var(--ex-border);
+
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.6rem;
+
+  text-transform: uppercase;
+}
+
+.winner-card--active .winner-card__badge {
+  color: var(--ex-blue);
+}
+
+
+/* =========================================================
+   WINNER IMAGE
+========================================================= */
+
+.winner-card__image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+.winner-card__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+  opacity: 0.78;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.winner-card:hover .winner-card__image img,
+.winner-card--active .winner-card__image img {
+  filter: grayscale(0%);
+
+  opacity: 1;
+
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.winner-card__image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    transparent 55%
+  );
+}
+
+
+/* =========================================================
+   WINNER NAME
+========================================================= */
+
+.winner-card__name {
+  position: absolute;
+
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.winner-card__name h3 {
+  margin: 0 0 0.4rem;
+
+  color: var(--ex-white);
+
+  font-size: 1.5rem;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+.winner-card__name span {
+  color: #d0d0d0;
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.62rem;
+}
+
+
+/* =========================================================
+   PRIZE
+========================================================= */
+
+.winner-card__prize {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding: 1.2rem 1.5rem;
+
+  border-bottom: 1px solid var(--ex-border);
+}
+
+.winner-card__prize span {
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.6rem;
+}
+
+.winner-card__prize strong {
+  color: var(--ex-blue);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.68rem;
+}
+
+
+/* =========================================================
+   WINNER DETAILS
+========================================================= */
+
+.winner-card__details {
+  padding: 1.5rem;
+}
+
+.winner-card__details h4 {
+  margin: 0 0 0.4rem;
+
+  color: var(--ex-white);
+
+  font-size: 1rem;
+}
+
+.winner-card__details > p {
+  margin-bottom: 1.2rem;
+
+  color: var(--ex-muted);
+
+  font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   PERKS
+========================================================= */
+
+.winner-card__perks {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.45rem;
+}
+
+.winner-card__perks span {
+  padding: 0.45rem 0.6rem;
+
+  background: transparent;
+
+  border: 1px solid var(--ex-border);
+
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.58rem;
+
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.winner-card:hover .winner-card__perks span,
+.winner-card--active .winner-card__perks span {
+  border-color: #34505a;
+
+  color: #d5d5d5;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.Escalatexx-overview {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 1.5rem;
+
+  padding: 8rem 0;
+
+  border-bottom: 1px solid var(--ex-border);
+}
+
+
+/* =========================================================
+   OVERVIEW CARDS
+========================================================= */
+
+.overview-card {
+  padding: 2.5rem;
+
+  border: 1px solid var(--ex-border);
+}
+
+.overview-card > span {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.12em;
+}
+
+.overview-card--dark {
+  background: var(--ex-black);
+
+  color: var(--ex-white);
+}
+
+.overview-card--dark > span {
+  color: var(--ex-blue);
+}
+
+.overview-card--dark h2 {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 4rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.overview-card--light {
+  background: #f2f2f2;
+
+  color: #000;
+}
+
+.overview-card--light > span {
+  color: #555;
+}
+
+.overview-card--light p {
+  color: #333;
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   OVERVIEW LINE
+========================================================= */
+
+.overview-line {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 2rem 0;
+
+  background: var(--ex-border);
+}
+
+
+/* =========================================================
+   OVERVIEW META
+========================================================= */
+
+.overview-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.8rem;
+}
+
+.overview-meta span {
+  color: var(--ex-muted);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.62rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   OVERVIEW FOOTER
+========================================================= */
+
+.overview-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  padding-top: 1rem;
+
+  border-top: 1px solid #ccc;
+
+  color: #555;
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.6rem;
+}
+
+
+/* =========================================================
+   DUAL GRID
+========================================================= */
+
+.Escalatexx-dual-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 1.5rem;
+
+  padding: 8rem 0;
+}
+
+
+/* =========================================================
+   DUAL CARDS
+========================================================= */
+
+.dual-card {
+  padding: 2.5rem;
+
+  border: 1px solid var(--ex-border);
+}
+
+.dual-card > span {
+  display: block;
+
+  margin-bottom: 1.5rem;
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.12em;
+}
+
+.dual-card h2 {
+  margin-bottom: 2rem;
+
+  font-size: clamp(2rem, 4vw, 4rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.05em;
+}
+
+.dual-card--light {
+  background: #f2f2f2;
+
+  color: #000;
+}
+
+.dual-card--light > span {
+  color: #555;
+}
+
+.dual-card--dark {
+  background: var(--ex-black);
+
+  color: var(--ex-white);
+}
+
+.dual-card--dark > span {
+  color: var(--ex-blue);
+}
+
+.dual-card--dark p {
+  max-width: 550px;
+
+  color: var(--ex-muted);
+
+  font-size: 0.9rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RUNNERS
+========================================================= */
+
+.runner-list {
+  display: flex;
+
+  flex-direction: column;
+
+  border-top: 1px solid #ccc;
+}
+
+.runner-item {
+  padding: 1.5rem 0;
+
+  border-bottom: 1px solid #ccc;
+}
+
+.runner-item strong {
+  display: block;
+
+  margin-bottom: 0.6rem;
+
+  color: #000;
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.72rem;
+}
+
+.runner-item p {
+  margin: 0;
+
+  color: #555;
+
+  font-size: 0.82rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   RETURN HOME
+========================================================= */
+
+.Escalatexx-home-button {
+  position: fixed;
+
+  left: 2rem;
+  bottom: 2rem;
+
+  z-index: 100;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+
+  padding: 0.8rem 1rem;
+
+  background: rgba(0, 0, 0, 0.94);
+
+  border: 1px solid var(--ex-border-light);
+
+  color: var(--ex-white);
+
+  font-family: var(--ex-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.06em;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.Escalatexx-home-button svg {
+  width: 17px;
+  height: 17px;
+}
+
+.Escalatexx-home-button:hover {
+  border-color: var(--ex-blue);
+
+  color: var(--ex-blue);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.Escalatexx-page footer {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .Escalatexx-hero__content {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .Escalatexx-hero__quote {
+    max-width: 600px;
+  }
+
+  .Escalatexx-winners-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .Escalatexx-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .Escalatexx-content {
+    padding: 0 5vw;
+  }
+
+  .Escalatexx-header {
+    padding: 1.3rem 5vw;
+  }
+
+  .Escalatexx-hero__content {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .Escalatexx-hero__specs span {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .Escalatexx-dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .winner-card--active {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .Escalatexx-hero {
+    min-height: 850px;
+  }
+
+  .Escalatexx-header__search span {
+    display: none;
+  }
+
+  .Escalatexx-hero__content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .Escalatexx-hero__headline h1 {
+    font-size: clamp(3.5rem, 15vw, 7rem);
+
+    line-height: 0.86;
+  }
+
+  .Escalatexx-hero__quote {
+    padding-left: 1rem;
+  }
+
+  .Escalatexx-hero__quote p {
+    font-size: 0.75rem;
+  }
+
+  .Escalatexx-hero__specs {
+    grid-template-columns: 1fr;
+  }
+
+  .Escalatexx-hero__specs span {
+    padding: 0.8rem 5vw;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .Escalatexx-hero__specs span:last-child {
+    border-bottom: none;
+  }
+
+  .Escalatexx-champions,
+  .Escalatexx-overview,
+  .Escalatexx-dual-grid {
+    padding: 5rem 0;
+  }
+
+  .Escalatexx-section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 2.5rem;
+  }
+
+  .Escalatexx-section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .Escalatexx-winners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .winner-card__image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .overview-card,
+  .dual-card {
+    padding: 1.5rem;
+  }
+
+  .overview-card--dark h2,
+  .dual-card h2 {
+    font-size: 2.5rem;
+  }
+
+  .Escalatexx-home-button {
+    left: 1rem;
+    bottom: 1rem;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .Escalatexx-content {
+    padding: 0 4.5vw;
+  }
+
+  .Escalatexx-header {
+    padding: 1rem 4.5vw;
+  }
+
+  .Escalatexx-header__brand {
+    font-size: 0.65rem;
+  }
+
+  .Escalatexx-hero__content {
+    padding-left: 4.5vw;
+    padding-right: 4.5vw;
+  }
+
+  .Escalatexx-hero__headline h1 {
+    font-size: 3.4rem;
+  }
+
+  .Escalatexx-hero__headline p {
+    font-size: 0.6rem;
+
+    line-height: 1.7;
+  }
+
+  .Escalatexx-hero__headline button {
+    width: 100%;
+  }
+
+  .Escalatexx-section-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .Escalatexx-navigation button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .winner-card__badge {
+    font-size: 0.55rem;
+  }
+
+  .winner-card__name h3 {
+    font-size: 1.25rem;
+  }
+
+  .winner-card__prize {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .winner-card__details {
+    padding: 1.2rem;
+  }
+
+  .winner-card__perks span {
+    font-size: 0.55rem;
+  }
+
+  .overview-card--dark h2,
+  .dual-card h2 {
+    font-size: 2.1rem;
+  }
+
+  .overview-footer {
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+
+  .Escalatexx-home-button {
+    padding: 0.7rem;
+
+    border-radius: 0;
+  }
+
+  .Escalatexx-home-button span {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .Escalatexx-page *,
+  .Escalatexx-page *::before,
+  .Escalatexx-page *::after {
+    animation: none !important;
+
+    transition: none !important;
+  }
+}

@@ -1,0 +1,787 @@
+/* ==========================================================
+   CYBERONITES — INTERNAL EVENTS
+========================================================== */
+
+:root {
+  --internal-black: #050505;
+  --internal-white: #f4f4f2;
+  --internal-muted: #858585;
+  --internal-dim: #4b4b4b;
+  --internal-blue: #0e86b0;
+  --internal-border: rgba(255, 255, 255, 0.12);
+
+  --internal-mono:
+    "IBM Plex Mono",
+    "Courier New",
+    monospace;
+
+  --internal-display:
+    "New Title",
+    serif;
+
+  --internal-body:
+    "Technor",
+    sans-serif;
+}
+
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.internal-events {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--internal-black);
+
+  color: var(--internal-white);
+
+  overflow: hidden;
+}
+
+
+/* ==========================================================
+   BACKGROUND GRID
+========================================================== */
+
+.internal-events__grid-bg {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 86px 86px;
+}
+
+
+
+.internal-events__header {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  padding: 95px 6vw 80px;
+
+  box-sizing: border-box;
+
+  text-align: left;
+}
+
+
+.internal-events__index {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 14px;
+
+  margin: 0 0 48px;
+
+  color: var(--internal-muted);
+
+  font-family: var(--internal-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.internal-events__index span:first-child {
+  color: var(--internal-white);
+}
+
+.internal-events__index i {
+  display: block;
+
+  width: 42px;
+  height: 1px;
+
+  background: var(--internal-dim);
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.internal-events__title {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0;
+
+  text-align: left;
+
+  font-family: var(--internal-display);
+
+  font-size: clamp(4.5rem, 10vw, 10rem);
+
+  font-weight: 700;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.02em;
+
+  color: var(--internal-white);
+}
+
+.internal-events__title span {
+  display: block;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.45);
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.internal-events__description {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 42px 0 0;
+
+  text-align: left;
+
+  color: var(--internal-muted);
+
+  font-family: var(--internal-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.025em;
+}/* ==========================================================
+   INDEX
+========================================================== */
+
+.internal-events__index {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 55px;
+
+  color: var(--internal-muted);
+
+  font-family: var(--internal-mono);
+
+  font-size: 0.62rem;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.internal-events__index span:first-child {
+  color: var(--internal-white);
+}
+
+.internal-events__index i {
+  width: 42px;
+
+  height: 1px;
+
+  background: var(--internal-dim);
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.internal-events__title {
+  max-width: 950px;
+
+  margin: 0;
+
+  font-family: var(--internal-display);
+
+  font-size: clamp(4rem, 9vw, 9rem);
+
+  font-weight: 700;
+
+  line-height: 0.82;
+
+  letter-spacing: -0.015em;
+
+  color: var(--internal-white);
+}
+
+.internal-events__title span {
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.45);
+
+  text-stroke: 1px rgba(255, 255, 255, 0.45);
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.internal-events__description {
+  max-width: 620px;
+
+  margin: 45px 0 0;
+
+  color: var(--internal-muted);
+
+  font-family: var(--internal-body);
+
+  font-size: 0.85rem;
+
+  font-weight: 500;
+
+  line-height: 1.9;
+
+  letter-spacing: 0.025em;
+}
+
+
+/* ==========================================================
+   CARDS AREA
+========================================================== */
+
+.internal-events__cards {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1450px;
+
+  margin: 0 auto;
+
+  padding: 0 6vw 110px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 45px 24px;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.internal-event-card {
+  position: relative;
+
+  min-width: 0;
+
+  border: 1px solid var(--internal-border);
+
+  background: rgba(255, 255, 255, 0.015);
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.internal-event-card:hover {
+  border-color: rgba(14, 134, 176, 0.7);
+
+  transform: translateY(-5px);
+}
+
+
+/* ==========================================================
+   NUMBER
+========================================================== */
+
+.internal-event-card__number {
+  position: absolute;
+
+  top: 12px;
+  left: 14px;
+
+  z-index: 4;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: var(--internal-mono);
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* ==========================================================
+   POSTER
+========================================================== */
+
+.internal-event-card__image {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  /*
+    A3 ratio:
+    297 / 420 = 0.707
+  */
+
+  aspect-ratio: 297 / 420;
+
+  overflow: hidden;
+
+  background: #0a0a0a;
+
+  text-decoration: none;
+}
+
+
+/* ==========================================================
+   POSTER IMAGE
+========================================================== */
+
+.internal-event-card__image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    ),
+    filter 0.4s ease;
+}
+
+.internal-event-card:hover
+.internal-event-card__image img {
+  transform: scale(1.035);
+
+  filter: brightness(0.7);
+}
+
+
+/* ==========================================================
+   IMAGE OVERLAY
+========================================================== */
+
+.internal-event-card__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  opacity: 0;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  color: var(--internal-white);
+
+  font-family: var(--internal-mono);
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.15em;
+
+  transition: opacity 0.3s ease;
+}
+
+.internal-event-card:hover
+.internal-event-card__overlay {
+  opacity: 1;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.internal-event-card__content {
+  position: relative;
+
+  padding: 23px 22px 25px;
+
+  border-top: 1px solid var(--internal-border);
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   DATE
+========================================================== */
+
+.internal-event-card__date {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--internal-blue);
+
+  font-family: var(--internal-mono);
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.internal-event-card__title {
+  min-height: 52px;
+
+  margin: 0;
+
+  color: var(--internal-white);
+
+  font-family: var(--internal-body);
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  line-height: 1.35;
+
+  letter-spacing: 0.015em;
+}
+
+
+/* ==========================================================
+   EXPLORE LINK
+========================================================== */
+
+.internal-event-card__link {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 24px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid var(--internal-border);
+
+  color: var(--internal-muted);
+
+  font-family: var(--internal-mono);
+
+  font-size: 0.52rem;
+
+  letter-spacing: 0.14em;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease;
+}
+
+.internal-event-card__link span {
+  font-size: 0.85rem;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.internal-event-card__link:hover {
+  color: var(--internal-blue);
+}
+
+.internal-event-card__link:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* ==========================================================
+   LARGE TABLET
+========================================================== */
+
+@media (max-width: 1200px) {
+
+  .internal-events__header {
+    padding-top: 125px;
+  }
+
+  .internal-events__cards {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 35px 22px;
+  }
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+  .internal-events__header {
+    padding-top: 110px;
+
+    padding-bottom: 70px;
+  }
+
+  .internal-events__cards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 30px 20px;
+  }
+
+  .internal-events__title {
+    font-size: clamp(3.5rem, 11vw, 6rem);
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+  .internal-events__header {
+    padding:
+      100px
+      6vw
+      60px;
+  }
+
+  .internal-events__index {
+    margin-bottom: 40px;
+
+    font-size: 0.52rem;
+
+    gap: 10px;
+  }
+
+  .internal-events__index i {
+    width: 25px;
+  }
+
+  .internal-events__title {
+    font-size: clamp(3.2rem, 17vw, 5rem);
+
+    line-height: 0.84;
+  }
+
+  .internal-events__description {
+    margin-top: 30px;
+
+    font-size: 0.7rem;
+
+    line-height: 1.8;
+  }
+
+  .internal-events__cards {
+    grid-template-columns: 1fr;
+
+    padding:
+      0
+      6vw
+      75px;
+
+    gap: 35px;
+  }
+
+  .internal-event-card__content {
+    padding: 20px;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 400px) {
+
+  .internal-events__header {
+    padding-top: 90px;
+  }
+
+  .internal-events__title {
+    font-size: 3rem;
+  }
+
+  .internal-events__description {
+    font-size: 0.65rem;
+  }
+
+  .internal-event-card__title {
+    font-size: 0.95rem;
+  }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .internal-event-card,
+  .internal-event-card__image img,
+  .internal-event-card__overlay,
+  .internal-event-card__link,
+  .internal-event-card__link span {
+    transition: none;
+  }
+
+}
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 900px) {
+
+  .internal-events__header {
+    padding: 115px 6vw 70px;
+
+    text-align: left;
+  }
+
+  .internal-events__title {
+    font-size: clamp(3.8rem, 11vw, 7rem);
+
+    text-align: left;
+  }
+
+  .internal-events__description {
+    text-align: left;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 600px) {
+
+  .internal-events__header {
+    padding: 100px 6vw 60px;
+
+    text-align: left;
+  }
+
+  .internal-events__index {
+    justify-content: flex-start;
+
+    margin-bottom: 38px;
+
+    font-size: 0.5rem;
+
+    gap: 10px;
+  }
+
+  .internal-events__index i {
+    width: 25px;
+  }
+
+  .internal-events__title {
+    font-size: clamp(3.2rem, 17vw, 5rem);
+
+    line-height: 0.85;
+
+    text-align: left;
+  }
+
+  .internal-events__description {
+    margin-top: 30px;
+
+    font-size: 0.7rem;
+
+    line-height: 1.8;
+
+    text-align: left;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 400px) {
+
+  .internal-events__header {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .internal-events__title {
+    font-size: 3rem;
+  }
+
+  .internal-events__description {
+    font-size: 0.65rem;
+  }
+}

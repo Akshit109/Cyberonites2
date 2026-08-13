@@ -1,0 +1,826 @@
+/* ==========================================================
+   GRAND EVENTS
+   FIELD OPERATIONS
+========================================================== */
+
+.grand {
+  position: relative;
+
+  width: 100%;
+
+  padding: 8rem 8vw;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background: transparent;
+
+  color: #fff;
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.grand::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 78px 78px;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.grand__header {
+  position: relative;
+
+  max-width: 1250px;
+
+  margin: 0 auto 5rem;
+}
+
+
+/* ==========================================================
+   EYEBROW
+========================================================== */
+
+.grand__eyebrow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 3rem;
+
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+
+  color: #888;
+}
+
+.grand__eyebrow i {
+  width: 45px;
+
+  height: 1px;
+
+  background: #555;
+}
+
+
+/* ==========================================================
+   HEADING ROW
+========================================================== */
+
+.grand__heading-row {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 5rem;
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.grand__title {
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(
+      3.5rem,
+      7vw,
+      7rem
+    );
+
+  font-weight: 900;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+
+  color: #f1efe8;
+}
+
+.grand__title span {
+  color: #707070;
+}
+
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+.grand__intro {
+  max-width: 390px;
+
+  margin: 0 0 0.5rem;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
+
+  color: #888;
+}
+
+
+/* ==========================================================
+   EVENTS LAYOUT
+========================================================== */
+
+.grand__events {
+  position: relative;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.5fr
+    1fr;
+
+  gap: 3px;
+
+  background: rgba(255,255,255,0.12);
+}
+
+
+/* ==========================================================
+   FEATURED
+========================================================== */
+
+.grand__featured {
+  position: relative;
+
+  min-width: 0;
+
+  background: #080808;
+
+  text-decoration: none;
+
+  color: #fff;
+
+  overflow: hidden;
+}
+
+
+/* ==========================================================
+   FEATURED IMAGE
+========================================================== */
+
+.grand__featured-image {
+  position: relative;
+
+  height: 470px;
+
+  overflow: hidden;
+}
+
+.grand__featured-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+  opacity: 0.82;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.grand__featured:hover img {
+  transform: scale(1.04);
+
+  filter: grayscale(0%);
+
+  opacity: 1;
+}
+
+
+/* ==========================================================
+   IMAGE DARKENING
+========================================================== */
+
+.grand__featured-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      rgba(0,0,0,0.75)
+    );
+
+  pointer-events: none;
+}
+
+
+/* ==========================================================
+   SCANLINE
+========================================================== */
+
+.grand__scanline {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 50%;
+
+  height: 1px;
+
+  background:
+    rgba(255,255,255,0.18);
+
+  z-index: 2;
+}
+
+
+/* ==========================================================
+   FEATURED INDEX
+========================================================== */
+
+.grand__featured-index {
+  position: absolute;
+
+  top: 1.5rem;
+
+  left: 1.5rem;
+
+  z-index: 3;
+
+  font-family:
+    "IBM Plex Mono",
+    monospace;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.15em;
+
+  color: #ccc;
+}
+
+
+/* ==========================================================
+   FEATURED ARROW
+========================================================== */
+
+.grand__featured-arrow {
+  position: absolute;
+
+  top: 1.2rem;
+
+  right: 1.5rem;
+
+  z-index: 3;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid
+    rgba(255,255,255,0.25);
+
+  font-size: 1.2rem;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.grand__featured:hover
+.grand__featured-arrow {
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* ==========================================================
+   FEATURED CONTENT
+========================================================== */
+
+.grand__featured-content {
+  min-height: 150px;
+
+  padding: 1.7rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid
+    rgba(255,255,255,0.1);
+}
+
+
+/* ==========================================================
+   CATEGORY
+========================================================== */
+
+.grand__category {
+  display: block;
+
+  margin-bottom: 0.7rem;
+
+  font-family:
+    "IBM Plex Mono",
+    monospace;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.15em;
+
+  color: #777;
+}
+
+
+/* ==========================================================
+   FEATURED TITLE
+========================================================== */
+
+.grand__featured-content h3 {
+  margin: 0;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   FEATURED META
+========================================================== */
+
+.grand__featured-meta {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 2rem;
+
+  font-family:
+    "IBM Plex Mono",
+    monospace;
+
+  font-size: 0.65rem;
+
+  letter-spacing: 0.08em;
+
+  color: #777;
+}
+
+
+/* ==========================================================
+   SIDE EVENTS
+========================================================== */
+
+.grand__side {
+  display: flex;
+
+  flex-direction: column;
+
+  background: #080808;
+}
+
+
+/* ==========================================================
+   SIDE EVENT
+========================================================== */
+
+.grand__side-event {
+  position: relative;
+
+  flex: 1;
+
+  display: grid;
+
+  grid-template-columns: 150px 1fr 45px;
+
+  align-items: center;
+
+  gap: 1.3rem;
+
+  padding: 1.2rem;
+
+  box-sizing: border-box;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.1);
+
+  transition:
+    background 0.3s ease;
+}
+
+.grand__side-event:last-child {
+  border-bottom: none;
+}
+
+.grand__side-event:hover {
+  background: #101010;
+}
+
+
+/* ==========================================================
+   SIDE IMAGE
+========================================================== */
+
+.grand__side-image {
+  height: 145px;
+
+  overflow: hidden;
+
+  background: #111;
+}
+
+.grand__side-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+
+  opacity: 0.7;
+
+  transition:
+    transform 0.45s ease,
+    filter 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.grand__side-event:hover
+.grand__side-image img {
+  transform: scale(1.05);
+
+  filter: grayscale(0%);
+
+  opacity: 1;
+}
+
+
+/* ==========================================================
+   SIDE CONTENT
+========================================================== */
+
+.grand__side-content {
+  min-width: 0;
+}
+
+
+/* ==========================================================
+   SIDE TOP
+========================================================== */
+
+.grand__side-top {
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 1rem;
+
+  font-family:
+    "IBM Plex Mono",
+    monospace;
+
+  font-size: 0.6rem;
+
+  letter-spacing: 0.12em;
+
+  color: #666;
+}
+
+.grand__side-top span:first-child {
+  color: #aaa;
+}
+
+
+/* ==========================================================
+   SIDE TITLE
+========================================================== */
+
+.grand__side-content h3 {
+  margin: 0 0 1rem;
+
+  font-family:
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 1.25rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  letter-spacing: -0.02em;
+
+  color: #e8e8e8;
+}
+
+
+/* ==========================================================
+   SIDE META
+========================================================== */
+
+.grand__side-meta {
+  display: flex;
+
+  gap: 8px;
+
+  font-family:
+    "IBM Plex Mono",
+    monospace;
+
+  font-size: 0.62rem;
+
+  color: #666;
+}
+
+
+/* ==========================================================
+   SIDE ARROW
+========================================================== */
+
+.grand__side-arrow {
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid
+    rgba(255,255,255,0.12);
+
+  color: #888;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.grand__side-event:hover
+.grand__side-arrow {
+  background: #fff;
+
+  color: #000;
+
+  transform: translateX(3px);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+  .grand {
+    padding:
+      6rem 6vw;
+  }
+
+  .grand__heading-row {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 2rem;
+  }
+
+  .grand__intro {
+    max-width: 550px;
+  }
+
+  .grand__events {
+    grid-template-columns: 1fr;
+  }
+
+  .grand__featured-image {
+    height: 420px;
+  }
+
+  .grand__side-event {
+    min-height: 180px;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+  .grand {
+    padding:
+      5rem 5vw;
+  }
+
+  .grand__eyebrow {
+    margin-bottom: 2rem;
+
+    font-size: 0.62rem;
+  }
+
+  .grand__title {
+    font-size:
+      clamp(
+        2.8rem,
+        12vw,
+        4.5rem
+      );
+  }
+
+  .grand__intro {
+    font-size: 0.9rem;
+  }
+
+  .grand__featured-image {
+    height: 300px;
+  }
+
+  .grand__featured-content {
+    min-height: 135px;
+
+    padding: 1.2rem;
+  }
+
+  .grand__featured-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .grand__featured-meta {
+    font-size: 0.55rem;
+  }
+
+  .grand__side-event {
+    grid-template-columns:
+      105px 1fr 38px;
+
+    gap: 0.9rem;
+
+    padding: 0.8rem;
+  }
+
+  .grand__side-image {
+    height: 105px;
+  }
+
+  .grand__side-content h3 {
+    font-size: 1rem;
+  }
+
+  .grand__side-top {
+    margin-bottom: 0.6rem;
+
+    font-size: 0.52rem;
+  }
+
+  .grand__side-meta {
+    font-size: 0.52rem;
+  }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+  .grand {
+    padding:
+      4rem 4vw;
+  }
+
+  .grand__title {
+    font-size: 2.65rem;
+  }
+
+  .grand__featured-image {
+    height: 250px;
+  }
+
+  .grand__featured-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .grand__side-event {
+    grid-template-columns:
+      85px 1fr 32px;
+  }
+
+  .grand__side-image {
+    height: 85px;
+  }
+
+  .grand__side-arrow {
+    width: 32px;
+
+    height: 32px;
+
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .grand__featured img,
+  .grand__side-image img,
+  .grand__featured-arrow,
+  .grand__side-arrow {
+    transition: none;
+  }
+}
