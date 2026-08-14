@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "./Navbar.css";
+import "./navbar.css";
 import logo from "../../img/ps-final.png";
 
 const Navbar = ({ scrollToComponent }) => {

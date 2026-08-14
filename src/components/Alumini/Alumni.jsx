@@ -16,7 +16,7 @@ import hackeroneLogo from "../../img/company-logo/hackerone.webp";
 import hackitLogo from "../../img/company-logo/hacklt.webp";
 import hcltechLogo from "../../img/company-logo/hcltech.webp";
 import juspayLogo from "../../img/company-logo/juspay.webp";
-import netSPILogo from "../../img/company-logo/netspilogo.webp";
+import netSPILogo from "../../img/company-logo/netSPILogo.webp";
 import paypalLogo from "../../img/company-logo/paypal.webp";
 import pertsolLogo from "../../img/company-logo/pertsol.webp";
 import sentineloneLogo from "../../img/company-logo/sentinelone.webp";

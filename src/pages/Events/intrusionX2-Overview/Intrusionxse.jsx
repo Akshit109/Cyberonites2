@@ -4,8 +4,8 @@ import "./Intrusionxse.css";
 import logo from "../../../img/ps-final.png";
 
 // Sponsors
-import logoCyberHost from "../../../img/intrusionX2/sponsors/CyberHost.webp";
-import logoStartUpNews from "../../../img/intrusionX2/sponsors/StartUpNews.webp";
+import logoCyberHost from "../../../img/intrusionX2/sponsors/Cyberhost.webp";
+import logoStartUpNews from "../../../img/intrusionX2/sponsors/Startupnews.webp";
 import logoHackHalt from "../../../img/intrusionX2/sponsors/Hackhalt.webp";
 import logoSturtle from "../../../img/intrusionX2/sponsors/Sturtlesecurity.webp";
 import logoHackerDNA from "../../../img/intrusionX2/sponsors/Hackerdna.webp";
