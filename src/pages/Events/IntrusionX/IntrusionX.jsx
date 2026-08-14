@@ -1714,7 +1714,7 @@ const IntrusionX = () => {
                 <span className="font-bold text-white text-[11px]">LIVE RECAP</span>
               </div>
               <button
-                onClick={() => navigate("/intrusion-x-second-edition")}
+                onClick={() => navigate("/intrusionx-Se")}
                 className="brutalist-btn px-4 py-1.5 text-xs font-bold uppercase"
               >
                 EDITION 2.0 →
@@ -2294,7 +2294,7 @@ const IntrusionX = () => {
             </button>
 
             <button
-              onClick={() => navigate("/intrusion-x-second-edition")}
+              onClick={() => navigate("/intrusionx-Se")}
               className="w-full sm:w-auto brutalist-btn bg-white text-black px-10 py-5 text-xs font-orbitron font-extrabold uppercase tracking-[0.25em] shadow-[6px_6px_0px_0px_#ffffff]"
             >
               INTRUSION-X EDITION 2.0 →

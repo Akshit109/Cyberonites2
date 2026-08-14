@@ -1,6 +1,9 @@
 import React from "react";
 import "./Intrusionxse.css";
+
 import logo from "../../../img/ps-final.png";
+
+// Sponsors
 import logoCyberHost from "../../../img/intrusionX2/sponsors/CyberHost.webp";
 import logoStartUpNews from "../../../img/intrusionX2/sponsors/StartUpNews.webp";
 import logoHackHalt from "../../../img/intrusionX2/sponsors/Hackhalt.webp";
@@ -19,6 +22,7 @@ import logoMcyber from "../../../img/intrusionX2/sponsors/Mcyber.webp";
 import logoSecops from "../../../img/intrusionX2/sponsors/Secops.webp";
 import logoHackersVilla from "../../../img/intrusionX2/sponsors/Hackersvilla.webp";
 
+// Gallery
 import img1 from "../../../img/intrusionX2/Gallery/img1.webp";
 import img2 from "../../../img/intrusionX2/Gallery/img2.webp";
 import img3 from "../../../img/intrusionX2/Gallery/img3.webp";
@@ -40,10 +44,12 @@ import img18 from "../../../img/intrusionX2/Gallery/img18.webp";
 import img19 from "../../../img/intrusionX2/Gallery/img19.webp";
 import img20 from "../../../img/intrusionX2/Gallery/img20.webp";
 
+// Winners
 import winner1 from "../../../img/intrusionX2/winners/first.jpeg";
 import winner2 from "../../../img/intrusionX2/winners/second.jpeg";
 import winner3 from "../../../img/intrusionX2/winners/third.jpeg";
 
+// Guests
 import g1 from "../../../img/intrusionX2/guests/ashish.webp";
 import g3 from "../../../img/intrusionX2/guests/deepak.webp";
 import g4 from "../../../img/intrusionX2/guests/ninad.webp";
@@ -52,7 +58,12 @@ import g6 from "../../../img/intrusionX2/guests/sanjeev.webp";
 import g7 from "../../../img/intrusionX2/guests/lucky.webp";
 import g8 from "../../../img/intrusionX2/guests/ritaj.webp";
 import g9 from "../../../img/intrusionX2/guests/prabudh.webp";
+
 import heroImg from "./intrusionx-se.webp";
+
+/* ==========================================================
+   TICKER
+========================================================== */
 
 const tickerWords = [
   "INTRUSIONX",
@@ -67,12 +78,19 @@ const tickerWords = [
   "WEB APPLICATIONS",
   "CYBERSECURITY",
 ];
+
 const tickerText = tickerWords.join("   ·   ");
-const galleryImages = [img1, img2, img3, img4, img5, img6];
+
+/* ==========================================================
+   INDUSTRY GUESTS
+========================================================== */
 
 const INDUSTRY_GUESTS = [
-  { name: "Mr. Ashish Kumar", org: "Co-Founder, MCyber Academy", img: g1 },
-
+  {
+    name: "Mr. Ashish Kumar",
+    org: "Co-Founder, MCyber Academy",
+    img: g1,
+  },
   {
     name: "Mr. Deepak Kumar",
     org: "Sr. Technical Manager, Ministry of Home Affairs",
@@ -83,7 +101,11 @@ const INDUSTRY_GUESTS = [
     org: "Sr. Security Consultant, Bugcrowd",
     img: g4,
   },
-  { name: "Mr. Sanchay Singh", org: "Founder, HackersVilla", img: g5 },
+  {
+    name: "Mr. Sanchay Singh",
+    org: "Founder, HackersVilla",
+    img: g5,
+  },
   {
     name: "Mr. Sanjeev Multani",
     org: "Head of Cybersecurity, Nuvollo",
@@ -91,9 +113,21 @@ const INDUSTRY_GUESTS = [
   },
 ];
 
+/* ==========================================================
+   ALUMNI
+========================================================== */
+
 const ALUMNI = [
-  { name: "Mr. Lucky Thandel", org: "Security Researcher, HackIT", img: g7 },
-  { name: "Mr. Ritaj Sharma", org: "Senior Consultant, Deloitte", img: g8 },
+  {
+    name: "Mr. Lucky Thandel",
+    org: "Security Researcher, HackIT",
+    img: g7,
+  },
+  {
+    name: "Mr. Ritaj Sharma",
+    org: "Senior Consultant, Deloitte",
+    img: g8,
+  },
   {
     name: "Mr. Prabudh Chakravorty",
     org: "Security Researcher, McAfee",
@@ -101,22 +135,48 @@ const ALUMNI = [
   },
 ];
 
+/* ==========================================================
+   MENTORS
+========================================================== */
+
 const MENTORS = [
   {
     name: "Dr. Asheesh Tiwari",
     role: "Associate Professor, Dept. CEA · Mentor",
   },
-  { name: "Dr. Arvind Prasad", role: "Faculty, GLA University" },
-  { name: "Mrs. Priyanka Sharma", role: "Technical Trainer, Dept. CEA" },
-  { name: "Mr. Shamsher Khan", role: "Technical Trainer, Dept. CEA" },
-  { name: "Mr. Shubham Shukla", role: "Assistant Professor, Dept. CEA" },
-  { name: "Ms. Nirankita Debnath", role: "Faculty Support" },
+  {
+    name: "Dr. Arvind Prasad",
+    role: "Faculty, GLA University",
+  },
+  {
+    name: "Mrs. Priyanka Sharma",
+    role: "Technical Trainer, Dept. CEA",
+  },
+  {
+    name: "Mr. Shamsher Khan",
+    role: "Technical Trainer, Dept. CEA",
+  },
+  {
+    name: "Mr. Shubham Shukla",
+    role: "Assistant Professor, Dept. CEA",
+  },
+  {
+    name: "Ms. Nirankita Debnath",
+    role: "Faculty Support",
+  },
   {
     name: "Dr. Ashok Bhansali",
     role: "Dean, Institute of Engineering & Technology",
   },
-  { name: "Dr. Sandeep Kumar Rathore", role: "Head of Department, CEA" },
+  {
+    name: "Dr. Sandeep Kumar Rathore",
+    role: "Head of Department, CEA",
+  },
 ];
+
+/* ==========================================================
+   EVALUATORS
+========================================================== */
 
 const EVALUATORS = [
   "Mr. Akash Chaudhary",
@@ -131,6 +191,10 @@ const EVALUATORS = [
   "Dr. Ram Manohar Nisarg",
   "Mr. Aashish Kumar",
 ];
+
+/* ==========================================================
+   WINNERS
+========================================================== */
 
 const TOP3 = [
   {
@@ -150,14 +214,15 @@ const TOP3 = [
       "ISO 27001 (HackHalt) + SecOps + Sturtle Cert + CSEM Access + Codecrafters Credits + HackerDNA & LetsDefend Labs + MCyber Courses + Goodies",
   },
   {
-    pos: " 3RD PLACE",
+    pos: "3RD PLACE",
     name: "ASTRAS",
     prize: "₹5,000",
     image: winner3,
     perks:
-      "ISO 27001 (HackHalt) + Sturtle Cert + CSEM Access + Codecrafters Credits + HackerDNA & LetsDefend Labs + MCyber Courses + Goodies",
+      "ISO 27001 (HackHalt) + SecOps + Sturtle Cert + CSEM Access + Codecrafters Credits + HackerDNA & LetsDefend Labs + MCyber Courses + Goodies",
   },
 ];
+
 const REST = [
   { pos: "04", name: "Gladiators Coders" },
   { pos: "05", name: "NeelTech" },
@@ -167,6 +232,10 @@ const REST = [
   { pos: "09", name: "404 Team Not Found" },
   { pos: "10", name: "Codeholics" },
 ];
+
+/* ==========================================================
+   SPONSORS
+========================================================== */
 
 const SPONSORS = [
   {
@@ -264,7 +333,8 @@ const SPONSORS = [
     name: "Unstop",
     logo: logoUnstop,
     url: "https://unstop.com",
-    offerings: "4 T-shirts, 30 Diaries, 25 Sticker Sheets, 50 Bookmarks",
+    offerings:
+      "4 T-shirts, 30 Diaries, 25 Sticker Sheets, 50 Bookmarks",
     pricePerQty: "₹150/₹100/₹5/₹15",
     totalQty: "109",
     total: "₹4,475",
@@ -341,7 +411,9 @@ const SPONSORS = [
   },
 ];
 
-
+/* ==========================================================
+   HIGHLIGHTS
+========================================================== */
 
 const HIGHLIGHTS = [
   "Hackathon kickoff on 10 April 2026 - official start of the 36-hour countdown.",
@@ -354,13 +426,54 @@ const HIGHLIGHTS = [
   "Final evaluations on 11 April 2026 - presentations judged on innovation, technical depth, and practical applicability.",
 ];
 
+/* ==========================================================
+   GALLERY
+========================================================== */
+
+const GALLERY_IMAGES = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12,
+  img13,
+  img14,
+  img15,
+  img16,
+  img17,
+  img18,
+  img19,
+  img20,
+];
+
+/* ==========================================================
+   COMPONENT
+========================================================== */
+
 export default function Intrusionxse() {
   return (
     <div className="intrusion-container">
+
+      {/* ======================================================
+          NAVBAR
+      ====================================================== */}
+
       <nav className="nav">
+
         <div className="nav-left">
           <div className="logo-bg">
-            <img src={logo} className="logo" alt="club logo" />
+            <img
+              src={logo}
+              className="logo"
+              alt="Cyberonites Club"
+            />
           </div>
         </div>
 
@@ -377,96 +490,171 @@ export default function Intrusionxse() {
             HOME
           </a>
         </div>
+
       </nav>
 
-      {/* ── TICKER ── */}
+      {/* ======================================================
+          TICKER
+      ====================================================== */}
+
       <div className="ticker-strip">
         <div className="ticker-inner">
-          {[tickerText, tickerText].map((t, i) => (
-            <span key={i}>{t}</span>
+          {[tickerText, tickerText].map((text, index) => (
+            <span key={index}>{text}</span>
           ))}
         </div>
       </div>
 
-      {/* ── HERO ── */}
+      {/* ======================================================
+          HERO
+      ====================================================== */}
+
       <section className="hero">
-        <section className="hero">
-          <img src={heroImg} alt="IntrusionX Banner" className="hero-img" />
-        </section>
+
+        <img
+          src={heroImg}
+          alt="IntrusionX Banner"
+          className="hero-img"
+        />
+
         <div className="hero-pills">
-          <span className="hero-pill"> 36-Hour Hackathon</span>
-          <span className="hero-pill"> CSED Block (AB-11), GLA University</span>
-          <span className="hero-pill"> April 10–11, 2026</span>
-          <span className="hero-pill">Mentored by Dr. Asheesh Tiwari</span>
+          <span className="hero-pill">
+            36-Hour Hackathon
+          </span>
+
+          <span className="hero-pill">
+            CSED Block (AB-11), GLA University
+          </span>
+
+          <span className="hero-pill">
+            April 10–11, 2026
+          </span>
+
+          <span className="hero-pill">
+            Mentored by Dr. Asheesh Tiwari
+          </span>
         </div>
+
         <div className="hero-rule" />
+
         <p className="hero-desc">
-          IntrusionX Second Edition was an intensive 36-hour cybersecurity
-          hackathon organized by the Cyberonites Club, designed to simulate
-          real-world cyber environments. Teams competed across domains spanning
-          AI/ML, Cloud Security, Web Applications, Blockchain, and IoT - pushing
-          the boundaries of strategic thinking, rapid decision-making, and
-          technical execution under pressure.
+          IntrusionX Second Edition was an intensive 36-hour
+          cybersecurity hackathon organized by the Cyberonites
+          Club, designed to simulate real-world cyber environments.
+          Teams competed across domains spanning AI/ML, Cloud
+          Security, Web Applications, Blockchain, and IoT -
+          pushing the boundaries of strategic thinking,
+          rapid decision-making, and technical execution under pressure.
         </p>
+
       </section>
 
-      {/* ── STATS ── */}
+      {/* ======================================================
+          STATS
+      ====================================================== */}
+
       <section className="stats">
+
         {[
-          { number: "991+", label: "Registrations" },
-          { number: "354", label: "Teams" },
-          { number: "67", label: "Finalists" },
-          { number: "36H", label: "Hackathon" },
+          {
+            number: "991+",
+            label: "Registrations",
+          },
+          {
+            number: "354",
+            label: "Teams",
+          },
+          {
+            number: "67",
+            label: "Finalists",
+          },
+          {
+            number: "36H",
+            label: "Hackathon",
+          },
         ].map(({ number, label }) => (
           <div className="stat" key={label}>
-            <span className="stat-number">{number}</span>
-            <span className="stat-label">{label}</span>
+            <span className="stat-number">
+              {number}
+            </span>
+
+            <span className="stat-label">
+              {label}
+            </span>
           </div>
         ))}
+
       </section>
 
-      {/* ── ABOUT ── */}
+      {/* ======================================================
+          ABOUT
+      ====================================================== */}
+
       <section id="about" className="section surface">
+
         <h2>ABOUT</h2>
+
         <p>
-          Organized by the Cyberonites Club at GLA University under the
-          mentorship of Dr. Asheesh Tiwari, IntrusionX Second Edition brought
-          together 354 teams and 991+ participants from top institutions across
-          India for a high-intensity 36-hour cybersecurity hackathon.
+          Organized by the Cyberonites Club at GLA University
+          under the mentorship of Dr. Asheesh Tiwari, IntrusionX
+          Second Edition brought together 354 teams and 991+
+          participants from top institutions across India for a
+          high-intensity 36-hour cybersecurity hackathon.
         </p>
+
         <p>
-          The event was designed to foster innovation, collaboration, and
-          real-world problem-solving across cutting-edge domains. What set
-          IntrusionX apart was its simulation of genuine cyber environments -
-          participants were required to think critically, adapt quickly, and
-          execute efficiently under time pressure, mirroring actual industry
-          scenarios.
+          The event was designed to foster innovation,
+          collaboration, and real-world problem-solving across
+          cutting-edge domains. What set IntrusionX apart was its
+          simulation of genuine cyber environments - participants
+          were required to think critically, adapt quickly, and
+          execute efficiently under time pressure, mirroring
+          actual industry scenarios.
         </p>
+
         <p>
-          The inaugural ceremony on 10 April 2026 was graced by Dr. Ashok
-          Bhansali (Dean, IET), Dr. Sandeep Kumar Rathore (HoD, CEA), along with
-          industry guests and alumni who set an enthusiastic and motivating tone
+          The inaugural ceremony on 10 April 2026 was graced by
+          Dr. Ashok Bhansali (Dean, IET), Dr. Sandeep Kumar
+          Rathore (HoD, CEA), along with industry guests and
+          alumni who set an enthusiastic and motivating tone
           for the entire event.
         </p>
+
       </section>
 
-      {/* ── SPONSOR CAROUSEL ── */}
-      <section id="sponsors" className="sponsor-carousel-section">
+      {/* ======================================================
+          SPONSORS
+      ====================================================== */}
+
+      <section
+        id="sponsors"
+        className="sponsor-carousel-section"
+      >
+
         <div className="carousel-meta">
+
           <div className="carousel-stat">
-            <span className="carousel-stat-label"> Total Prize Pool</span>
-            <span className="carousel-stat-val">₹21,00,000</span>
+            <span className="carousel-stat-label">
+              Total Prize Pool
+            </span>
+
+            <span className="carousel-stat-val">
+              ₹21,00,000
+            </span>
           </div>
+
           <div className="carousel-divider" />
+
         </div>
 
-        {/* Infinite auto-scrolling logo strip - pauses on hover */}
         <div className="carousel-track-wrap">
+
           <div className="carousel-track">
+
             {[...SPONSORS, ...SPONSORS].map(
-              ({ sn, name, logo: spLogo, url }, i) => (
+              ({ sn, name, logo: sponsorLogo, url }, index) => (
                 <a
-                  key={sn + i}
+                  key={`${sn}-${index}`}
                   className="carousel-logo-card"
                   href={url}
                   target="_blank"
@@ -474,27 +662,37 @@ export default function Intrusionxse() {
                   title={`Visit ${name}`}
                 >
                   <img
-                    src={spLogo}
+                    src={sponsorLogo}
                     alt={name}
                     className="carousel-sponsor-logo"
                     loading="lazy"
                   />
                 </a>
-              ),
+              )
             )}
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ── EVENT STRUCTURE ── */}
+      {/* ======================================================
+          ROUNDS
+      ====================================================== */}
+
       <section id="rounds" className="section">
+
         <h2>ROUNDS</h2>
+
         <p>
-          The competition was structured across three stages ensuring idea
-          quality, technical depth, and real-world applicability before teams
-          reached the final hackathon floor.
+          The competition was structured across three stages
+          ensuring idea quality, technical depth, and real-world
+          applicability before teams reached the final hackathon floor.
         </p>
+
         <div className="rounds-grid">
+
           {[
             {
               index: "Round 01",
@@ -527,274 +725,446 @@ export default function Intrusionxse() {
               ],
             },
           ].map(({ index, title, date, bullets }) => (
+
             <div className="round-card" key={index}>
-              <span className="round-index">{index}</span>
-              <div className="round-title">{title}</div>
-              {date && <div className="round-date">{date}</div>}
+
+              <span className="round-index">
+                {index}
+              </span>
+
+              <div className="round-title">
+                {title}
+              </div>
+
+              {date && (
+                <div className="round-date">
+                  {date}
+                </div>
+              )}
+
               <ul>
-                {bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
+                {bullets.map((bullet, index) => (
+                  <li key={index}>
+                    {bullet}
+                  </li>
                 ))}
               </ul>
+
             </div>
+
           ))}
+
         </div>
+
       </section>
 
-      {/* ── PARTICIPATION ── */}
+      {/* ======================================================
+          REACH
+      ====================================================== */}
+
       <section className="section surface">
+
         <h2>REACH</h2>
+
         <div className="two-col">
+
           <div>
+
             <p>
-              IntrusionX SE drew participants from across India representing 15+
-              universities and colleges. The diversity of institutions created a
-              competitive yet collaborative atmosphere.
+              IntrusionX SE drew participants from across India
+              representing 15+ universities and colleges. The
+              diversity of institutions created a competitive yet
+              collaborative atmosphere.
             </p>
+
             <p>
-              Of the 67 finalist teams, 52 were internal GLA University teams
-              and 15 were external teams from institutions including Chandigarh
-              University, Galgotias, LPU, SRMIST, and more.
+              Of the 67 finalist teams, 52 were internal GLA
+              University teams and 15 were external teams from
+              institutions including Chandigarh University,
+              Galgotias, LPU, SRMIST, and more.
             </p>
+
           </div>
+
           <div>
+
             {[
-              { label: "Total Registrations", val: "991+" },
-              { label: "Total Teams", val: "354" },
-              { label: "Finalist Teams", val: "67" },
-              { label: "External Teams", val: "15" },
-              { label: "Internal Teams", val: "52" },
+              {
+                label: "Total Registrations",
+                val: "991+",
+              },
+              {
+                label: "Total Teams",
+                val: "354",
+              },
+              {
+                label: "Finalist Teams",
+                val: "67",
+              },
+              {
+                label: "External Teams",
+                val: "15",
+              },
+              {
+                label: "Internal Teams",
+                val: "52",
+              },
             ].map(({ label, val }) => (
+
               <div
                 key={label}
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: "10px 0",
-                  borderBottom: "1px solid #e5e5e5",
-                }}
+                className="reach-stat"
               >
-                <span
-                  style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: 9,
-                    letterSpacing: "0.15em",
-                    textTransform: "uppercase",
-                    color: "#888",
-                  }}
-                >
+                <span className="reach-stat-label">
                   {label}
                 </span>
-                <span
-                  style={{
-                    fontFamily: "'Bebas Neue', sans-serif",
-                    fontSize: 22,
-                    color: "#000",
-                    letterSpacing: "0.02em",
-                  }}
-                >
+
+                <span className="reach-stat-value">
                   {val}
                 </span>
               </div>
+
             ))}
+
           </div>
+
         </div>
+
       </section>
 
-      {/* ── HIGHLIGHTS ── */}
+      {/* ======================================================
+          HIGHLIGHTS
+      ====================================================== */}
+
       <section className="section">
+
         <h2>HIGHLIGHTS</h2>
+
         <ul className="highlights-list">
-          {HIGHLIGHTS.map((h, i) => (
-            <li key={i}>
-              <span className="hi-num">{String(i + 1).padStart(2, "0")}</span>
-              {h}
+
+          {HIGHLIGHTS.map((highlight, index) => (
+
+            <li key={index}>
+
+              <span className="hi-num">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              {highlight}
+
             </li>
+
           ))}
+
         </ul>
+
       </section>
+
+      {/* ======================================================
+          GUESTS
+      ====================================================== */}
 
       <section className="section surface">
+
         <h2>GUESTS</h2>
+
         <p>
-          Esteemed industry professionals and alumni enriched the event with
-          real-world insights, mentorship, and evaluation expertise.
+          Esteemed industry professionals and alumni enriched
+          the event with real-world insights, mentorship,
+          and evaluation expertise.
         </p>
 
         <div className="guests-grid">
-          {INDUSTRY_GUESTS.map(({ name, org, img }) => (
-            <div className="guest-card" key={name}>
-              <img src={img} alt={name} className="guest-img" />
-              <div className="guest-name">{name}</div>
-              <div className="guest-org">{org}</div>
-            </div>
-          ))}
-        </div>
 
-        <div className="section-rule" />
-        <h2>Alumni</h2>
-        <div className="guests-grid">
-          {ALUMNI.map(({ name, org, img }) => (
-            <div className="guest-card" key={name}>
-              <img src={img} alt={name} className="guest-img" />
-              <div className="guest-name">{name}</div>
-              <div className="guest-org">{org}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── MENTORS & FACULTY ── */}
-      <section className="section">
-        <h2>Evaluators</h2>
-        <div className="people-grid" style={{ marginTop: 0 }}>
-          {EVALUATORS.map((name) => (
-            <div className="person-card" key={name}>
-              <div className="person-name">{name}</div>
-              <div className="person-role"> Evaluator</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ── WINNERS ── */}
-      <section id="winners" className="section surface">
-        <h2>WINNERS</h2>
-        <p>
-          The top-performing teams were felicitated with cash prizes,
-          certifications from HackHalt (ISO 27001), SecOps Group, Sturtle
-          Security, premium platform access, medals, T-shirts, and goodies.
-        </p>
-        <div className="winners-grid">
-          {TOP3.map(({ pos, name, prize, perks, image }) => (
-            <div className="winner-card top" key={name}>
-              <img src={image} alt={name} className="winner-img" />
-
-              <span className="winner-pos">{pos}</span>
-
-              <div className="winner-name">{name}</div>
+          {INDUSTRY_GUESTS.map(
+            ({ name, org, img }) => (
 
               <div
-                className={`winner-prize${pos.includes("01") ? " red" : ""}`}
+                className="guest-card"
+                key={name}
               >
-                {prize}
+
+                <img
+                  src={img}
+                  alt={name}
+                  className="guest-img"
+                />
+
+                <div className="guest-name">
+                  {name}
+                </div>
+
+                <div className="guest-org">
+                  {org}
+                </div>
+
               </div>
 
-              <div className="winner-perks">{perks}</div>
-            </div>
-          ))}
+            )
+          )}
+
         </div>
+
         <div className="section-rule" />
-        <div className="leaderboard">
-          {REST.map(({ pos, name }) => (
-            <div className="lb-row" key={name}>
-              <span className="lb-num">{pos}</span>
-              <span className="lb-team">{name}</span>
-              <span className="lb-badge">Felicitated</span>
-            </div>
-          ))}
+
+        <h2>ALUMNI</h2>
+
+        <div className="guests-grid">
+
+          {ALUMNI.map(
+            ({ name, org, img }) => (
+
+              <div
+                className="guest-card"
+                key={name}
+              >
+
+                <img
+                  src={img}
+                  alt={name}
+                  className="guest-img"
+                />
+
+                <div className="guest-name">
+                  {name}
+                </div>
+
+                <div className="guest-org">
+                  {org}
+                </div>
+
+              </div>
+
+            )
+          )}
+
         </div>
+
       </section>
 
-      {/* ── IMPACT ── */}
+      {/* ======================================================
+          EVALUATORS
+      ====================================================== */}
+
       <section className="section">
-       
-        <h2>IMPACT</h2>
-        <p>
-          IntrusionX Second Edition successfully bridged the gap between
-          academic learning and real-world cybersecurity challenges.
-          Participants gained hands-on experience, industry exposure, and deeper
-          insight into modern cyber threats across AI/ML, Cloud, Blockchain, and
-          IoT domains.
-        </p>
-        <p>
-          The event also surfaced key areas for improvement - financial
-          management, team coordination, logistics, and communication - which
-          will be addressed in future editions to make IntrusionX even more
-          impactful.
-        </p>
-        <div className="section-rule" />
-        <span className="red-tag">EXECUTE OR BE EXECUTED</span>
+
+        <h2>EVALUATORS</h2>
+
+        <div
+          className="people-grid"
+          style={{ marginTop: 0 }}
+        >
+
+          {EVALUATORS.map((name) => (
+
+            <div
+              className="person-card"
+              key={name}
+            >
+
+              <div className="person-name">
+                {name}
+              </div>
+
+              <div className="person-role">
+                Evaluator
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
       </section>
 
-      <section id="gallery" className="section surface">
+      {/* ======================================================
+          WINNERS
+      ====================================================== */}
+
+      <section
+        id="winners"
+        className="section surface"
+      >
+
+        <h2>WINNERS</h2>
+
+        <p>
+          The top-performing teams were felicitated with cash
+          prizes, certifications from HackHalt (ISO 27001),
+          SecOps Group, Sturtle Security, premium platform
+          access, medals, T-shirts, and goodies.
+        </p>
+
+        <div className="winners-grid">
+
+          {TOP3.map(
+            ({ pos, name, prize, perks, image }) => (
+
+              <div
+                className="winner-card top"
+                key={name}
+              >
+
+                <img
+                  src={image}
+                  alt={name}
+                  className="winner-img"
+                />
+
+                <span className="winner-pos">
+                  {pos}
+                </span>
+
+                <div className="winner-name">
+                  {name}
+                </div>
+
+                <div
+                  className={`winner-prize${
+                    pos.includes("1ST")
+                      ? " red"
+                      : ""
+                  }`}
+                >
+                  {prize}
+                </div>
+
+                <div className="winner-perks">
+                  {perks}
+                </div>
+
+              </div>
+
+            )
+          )}
+
+        </div>
+
+        <div className="section-rule" />
+
+        <div className="leaderboard">
+
+          {REST.map(({ pos, name }) => (
+
+            <div
+              className="lb-row"
+              key={name}
+            >
+
+              <span className="lb-num">
+                {pos}
+              </span>
+
+              <span className="lb-team">
+                {name}
+              </span>
+
+              <span className="lb-badge">
+                Felicitated
+              </span>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* ======================================================
+          IMPACT
+      ====================================================== */}
+
+      <section className="section">
+
+        <h2>IMPACT</h2>
+
+        <p>
+          IntrusionX Second Edition successfully bridged the
+          gap between academic learning and real-world
+          cybersecurity challenges. Participants gained
+          hands-on experience, industry exposure, and deeper
+          insight into modern cyber threats across AI/ML,
+          Cloud, Blockchain, and IoT domains.
+        </p>
+
+        <p>
+          The event also surfaced key areas for improvement -
+          financial management, team coordination, logistics,
+          and communication - which will be addressed in
+          future editions to make IntrusionX even more impactful.
+        </p>
+
+        <div className="section-rule" />
+
+        <span className="red-tag">
+          EXECUTE OR BE EXECUTED
+        </span>
+
+      </section>
+
+      {/* ======================================================
+          GALLERY
+      ====================================================== */}
+
+      <section
+        id="gallery"
+        className="section surface"
+      >
+
         <h2>GALLERY</h2>
-        <p>Hover to focus on moments from IntrusionX.</p>
+
+        <p>
+          Hover to focus on moments from IntrusionX.
+        </p>
 
         <div className="focus-gallery">
-          <div className="focus-card">
-            <img src={img1} alt="img1" />
-          </div>
-          <div className="focus-card">
-            <img src={img2} alt="img2" />
-          </div>
-          <div className="focus-card">
-            <img src={img3} alt="img3" />
-          </div>
-          <div className="focus-card">
-            <img src={img4} alt="img4" />
-          </div>
-          <div className="focus-card">
-            <img src={img5} alt="img5" />
-          </div>
-          <div className="focus-card">
-            <img src={img6} alt="img6" />
-          </div>
-          <div className="focus-card">
-            <img src={img7} alt="img7" />
-          </div>
-          <div className="focus-card">
-            <img src={img8} alt="img8" />
-          </div>
-          <div className="focus-card">
-            <img src={img9} alt="img9" />
-          </div>
-          <div className="focus-card">
-            <img src={img10} alt="img10" />
-          </div>
-          <div className="focus-card">
-            <img src={img11} alt="img11" />
-          </div>
-          <div className="focus-card">
-            <img src={img12} alt="img12" />
-          </div>
-          <div className="focus-card">
-            <img src={img13} alt="img13" />
-          </div>
-          <div className="focus-card">
-            <img src={img14} alt="img14" />
-          </div>
-          <div className="focus-card">
-            <img src={img15} alt="img15" />
-          </div>
-          <div className="focus-card">
-            <img src={img16} alt="img16" />
-          </div>
-          <div className="focus-card">
-            <img src={img17} alt="img17" />
-          </div>
-          <div className="focus-card">
-            <img src={img18} alt="img18" />
-          </div>
-          <div className="focus-card">
-            <img src={img19} alt="img19" />
-          </div>
-          <div className="focus-card">
-            <img src={img20} alt="img20" />
-          </div>
+
+          {GALLERY_IMAGES.map((image, index) => (
+
+            <div
+              className="focus-card"
+              key={index}
+            >
+
+              <img
+                src={image}
+                alt={`IntrusionX moment ${index + 1}`}
+                loading="lazy"
+              />
+
+            </div>
+
+          ))}
+
         </div>
+
       </section>
-      {/* ── FOOTER ── */}
+
+      {/* ======================================================
+          FOOTER
+      ====================================================== */}
+
       <footer>
+
         <span className="footer-left">
-          Cyberonites Club &nbsp;·&nbsp; GLA University, Mathura &nbsp;·&nbsp;
+          Cyberonites Club
+          &nbsp;·&nbsp;
+          GLA University, Mathura
+          &nbsp;·&nbsp;
           IntrusionX SE © 2026
         </span>
+
         <span className="footer-right">
-          BEST OF LUCK - <span className="accent">EXECUTE OR BE EXECUTED</span>
+          BEST OF LUCK -
+          <span className="accent">
+            EXECUTE OR BE EXECUTED
+          </span>
         </span>
+
       </footer>
+
     </div>
   );
 }

@@ -8,10 +8,10 @@ import Team2025 from "./components/team-2025/Team2025";
 import Team2026 from "./components/team-2026/Team2026";
 import InternalEvents from "./components/Eventdashboards/InternalEvents";
 import Externalevents from "./components/Eventdashboards/Externalevents";
-import IntrusionXse from "./pages/Events/IntrusionX2-Overview/Intrusionxse";
+import IntrusionXse from "./pages/Events/intrusionX2-Overview/Intrusionxse";
 import EscalateXv2 from "./pages/Events/Escalatexv2/Escalatexv2";
 import Escalatex from "./pages/Events/Escalatex/Escalatex";
-import Hackops from "./pages/Events/Hackops/Hackops";
+import Hackops from "./pages/Events/hackops/Hackops";
 import IntrusionX from "./pages/Events/IntrusionX/IntrusionX";
 
 
