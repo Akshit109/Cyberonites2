@@ -1,634 +1,809 @@
 /* ==========================================================
-   TEAM 2026
-   CYBERONITES — MINIMAL / BOLD / CLASSIC
-========================================================== */
+   TEAM 2026 — Complete Styles
+   ========================================================== */
+
+/* ---------- Keyframes ---------- */
+@keyframes floatY1 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes floatY2 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+@keyframes floatY3 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes floatY4 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes floatY5 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.animate-float-1 {
+    animation: floatY1 4.0s ease-in-out infinite;
+}
+
+.animate-float-2 {
+    animation: floatY2 4.8s ease-in-out infinite;
+}
+
+.animate-float-3 {
+    animation: floatY3 3.6s ease-in-out infinite;
+}
+
+.animate-float-4 {
+    animation: floatY4 4.4s ease-in-out infinite;
+}
+
+.animate-float-5 {
+    animation: floatY5 5.2s ease-in-out infinite;
+}
+
+/* ==========================================================
+   PAGE WRAPPER
+   ========================================================== */
 
 .team2026 {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
+    min-height: 100vh;
+    background: #e8e8ec;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    box-sizing: border-box;
+}
 
-  padding-top: 100px;
-
-  background: #050505;
-  color: #ffffff;
-
-  overflow: hidden;
-  box-sizing: border-box;
+.team2026 *,
+.team2026 *::before,
+.team2026 *::after {
+    box-sizing: border-box;
 }
 
 /* ==========================================================
-   BACKGROUND GRID
-========================================================== */
+   HERO SECTION
+   ========================================================== */
 
-.team2026__grid {
-  position: fixed;
-  inset: 0;
-
-  z-index: 0;
-  pointer-events: none;
-
-  background-image:
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.035) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.035) 1px,
-      transparent 1px
-    );
-
-  background-size: 78px 78px;
-
-  mask-image: linear-gradient(
-    to bottom,
-    black 0%,
-    black 75%,
-    transparent 100%
-  );
+.team2026__hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
 }
 
-/* ==========================================================
-   HEADER
-========================================================== */
-
-.team2026__header {
-  position: relative;
-  z-index: 2;
-
-  width: 100%;
-  max-width: 1250px;
-
-  margin: 0 auto;
-
-  padding: 80px 40px 120px;
-
-  box-sizing: border-box;
-}
-
-/* ==========================================================
-   EYEBROW
-========================================================== */
-
-.team2026__eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 14px;
-
-  margin-bottom: 42px;
-
-  font-family: "IBM Plex Mono", "Courier New", monospace;
-
-  font-size: 11px;
-  font-weight: 500;
-
-  letter-spacing: 0.2em;
-
-  color: #888888;
-}
-
-.team2026__line {
-  width: 38px;
-  height: 1px;
-
-  display: block;
-
-  background: #0e86b0;
-}
-
-/* ==========================================================
-   MAIN TITLE
-========================================================== */
-
-.team2026__title {
-  margin: 0;
-
-  text-align: center;
-
-  font-family: "Helvetica Neue", Arial, sans-serif;
-
-  font-size: clamp(4rem, 9vw, 9rem);
-
-  font-weight: 900;
-
-  line-height: 0.86;
-
-  letter-spacing: -0.055em;
-
-  color: #ffffff;
-}
-
-.team2026__title span {
-  color: #8d8d8d;
-}
-
-/* ==========================================================
-   INTRO
-========================================================== */
-
-.team2026__intro {
-  max-width: 760px;
-
-  margin: 50px auto 30px;
-
-  text-align: center;
-
-  font-family: "Helvetica Neue", Arial, sans-serif;
-
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-
-  line-height: 1.7;
-
-  color: #929292;
-}
-
-/* ==========================================================
-   META
-========================================================== */
-
-.team2026__meta {
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
-
-  font-family: "IBM Plex Mono", "Courier New", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.16em;
-
-  color: #555555;
-}
-
-/* ==========================================================
-   SECTION
-========================================================== */
-
-.team2026__section {
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-  max-width: 1250px;
-
-  margin: 0 auto;
-
-  padding: 90px 40px 120px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-  box-sizing: border-box;
-}
-
-/* ==========================================================
-   SECTION HEADER
-========================================================== */
-
-.team2026__section-header {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(250px, 420px);
-
-  align-items: end;
-
-  gap: 70px;
-
-  margin-bottom: 70px;
-
-  text-align: center;
-}
-
-.team2026__section-header > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ==========================================================
-   SECTION NUMBER
-========================================================== */
-
-.team2026__number {
-  margin: 0 0 20px;
-
-  font-family: "IBM Plex Mono", "Courier New", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.2em;
-
-  color: #0e86b0;
-}
-
-/* ==========================================================
-   SECTION TITLE
-========================================================== */
-
-.team2026__section-header h2 {
-  margin: 0;
-
-  font-family: "Helvetica Neue", Arial, sans-serif;
-
-  font-size: clamp(3rem, 6vw, 6rem);
-
-  font-weight: 900;
-
-  line-height: 0.86;
-
-  letter-spacing: -0.05em;
-
-  color: #ffffff;
-}
-
-/* ==========================================================
-   SECTION DESCRIPTION
-========================================================== */
-
-.team2026__section-description {
-  max-width: 400px;
-
-  margin: 0 auto;
-
-  font-family: "Helvetica Neue", Arial, sans-serif;
-
-  font-size: 0.95rem;
-
-  line-height: 1.7;
-
-  color: #777777;
-
-  text-align: center;
-}
-
-/* ==========================================================
-   TEAM GRID
-========================================================== */
-
-.team2026__gallery {
-  width: 100%;
-  max-width: 1100px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  column-gap: 28px;
-  row-gap: 70px;
-
-  justify-items: center;
-  align-items: start;
-}
-
-/* ==========================================================
-   GALLERY ITEM
-========================================================== */
-
-.team2026__gallery-item {
-  width: 100%;
-  min-width: 0;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: flex-start;
-}
-
-/* ==========================================================
-   TITLE CARD
-========================================================== */
-
-.team2026__gallery-item .title-card {
-  width: 100%;
-  max-width: 340px;
-}
-
-/*
-   If TitleCard does not have .title-card,
-   this still keeps the component centered.
-*/
-.team2026__gallery-item > * {
-  max-width: 100%;
-}
-
-/* ==========================================================
-   CENTER INCOMPLETE LAST ROW
-========================================================== */
-
-/*
-   1 card remaining
-
-   1  2  3
-      4
-*/
-
-.team2026__gallery-item:nth-child(3n + 1):last-child {
-  grid-column: 2;
-}
-
-/*
-   2 cards remaining
-
-   1  2  3
-     4  5
-*/
-
-.team2026__gallery-item:nth-child(3n + 1):nth-last-child(2) {
-  grid-column: 2;
-}
-
-.team2026__gallery-item:nth-child(3n + 2):last-child {
-  grid-column: 3;
-}
-
-/* ==========================================================
-   END SECTION
-========================================================== */
-
-.team2026__end {
-  position: relative;
-
-  z-index: 2;
-
-  width: 100%;
-  max-width: 1250px;
-
-  margin: 0 auto;
-
-  padding: 110px 40px 160px;
-
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-  box-sizing: border-box;
-
-  text-align: center;
-}
-
-.team2026__end p {
-  margin: 0 0 28px;
-
-  font-family: "IBM Plex Mono", "Courier New", monospace;
-
-  font-size: 10px;
-
-  letter-spacing: 0.2em;
-
-  color: #0e86b0;
-}
-
-.team2026__end h2 {
-  margin: 0;
-
-  font-family: "Helvetica Neue", Arial, sans-serif;
-
-  font-size: clamp(3.5rem, 8vw, 8rem);
-
-  font-weight: 900;
-
-  line-height: 0.85;
-
-  letter-spacing: -0.055em;
-
-  color: #ffffff;
-}
-
-.team2026__end h2 span {
-  color: #777777;
-}
-
-/* ==========================================================
-   TABLET
-========================================================== */
-
-@media (max-width: 1000px) {
-
-  .team2026 {
-    padding-top: 80px;
-  }
-
-  .team2026__header {
-    padding: 65px 30px 100px;
-  }
-
-  .team2026__section {
-    padding: 75px 30px 100px;
-  }
-
-  .team2026__section-header {
-    grid-template-columns: 1fr;
-
-    gap: 28px;
-
-    margin-bottom: 60px;
-  }
-
-  .team2026__section-header > div {
+.team2026__hero-inner {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-  }
+    justify-content: flex-end;
+    min-height: 820px;
+    overflow: hidden;
+}
 
-  .team2026__gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+/* ---------- Background portrait ---------- */
 
-    column-gap: 24px;
-    row-gap: 60px;
+.team2026__bg-portrait {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 64px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+}
 
-    max-width: 800px;
-  }
+.team2026__bg-portrait img {
+    height: 100%;
+    max-height: 700px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.16;
+    filter: grayscale(1);
+    transition: all 0.7s ease-in-out;
+}
 
-  /* One card left → center */
+/* ---------- Large watermark text ---------- */
 
-  .team2026__gallery-item:nth-child(2n + 1):last-child {
-    grid-column: 1 / -1;
-  }
+.team2026__watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 20px;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+    overflow: hidden;
+}
 
-  /* Reset the 3-column rules */
-  .team2026__gallery-item:nth-child(3n + 1):last-child,
-  .team2026__gallery-item:nth-child(3n + 1):nth-last-child(2),
-  .team2026__gallery-item:nth-child(3n + 2):last-child {
-    grid-column: auto;
-  }
+.team2026__watermark span {
+    font-weight: 900;
+    font-size: 6.5vw;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(148, 163, 184, 0.4);
+    line-height: 1;
+    white-space: nowrap;
+}
 
-  /* Reapply 2-column final-row centering */
-  .team2026__gallery-item:nth-child(2n + 1):last-child {
-    grid-column: 1 / -1;
-  }
+/* ---------- Role Label ---------- */
 
-  .team2026__end {
-    padding: 90px 30px 130px;
-  }
+.team2026__role-label {
+    position: absolute;
+    left: 24px;
+    top: 35%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.45em;
+    color: #0f172a;
+    font-weight: 900;
+    user-select: none;
+    pointer-events: none;
+    z-index: 3;
+    transition: all 0.5s ease-in-out;
+}
+
+/* ---------- Featured card area ---------- */
+
+.team2026__featured-wrapper {
+    position: relative;
+    z-index: 20;
+    margin-bottom: 16px;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.team2026__featured-wrapper--hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+.team2026__featured-wrapper--visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
 }
 
 /* ==========================================================
-   MOBILE
-========================================================== */
+   FEATURED CARD
+   ========================================================== */
+
+.team2026__card {
+    width: 330px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(241, 245, 249, 0.9);
+    overflow: hidden;
+    text-align: left;
+}
+
+.team2026__card-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+}
+
+.team2026__card-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.team2026__card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team2026__card-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.team2026__card-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.team2026__card-role {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 500;
+    margin-top: 2px;
+    letter-spacing: 0.05em;
+}
+
+/* Social icons */
+
+.team2026__card-socials {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.team2026__card-social-link {
+    display: flex;
+    height: 22px;
+    width: 22px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    color: #94a3b8;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.team2026__card-social-link:hover {
+    background: #eff6ff;
+    color: #2563eb;
+    border-color: #93c5fd;
+}
+
+.team2026__card-social-link svg {
+    height: 10px;
+    width: 10px;
+}
+
+/* Bio section */
+
+.team2026__card-bio {
+    padding: 10px 14px;
+    border-top: 1px solid #f1f5f9;
+    background: rgba(248, 250, 252, 0.5);
+}
+
+.team2026__card-bio p {
+    margin: 0;
+    color: #475569;
+    font-size: 11px;
+    line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Nav arrows */
+
+.team2026__card-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 14px 10px;
+    background: rgba(248, 250, 252, 0.5);
+}
+
+.team2026__card-nav-group {
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    overflow: hidden;
+    background: #2563eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.team2026__card-nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+    padding: 0;
+}
+
+.team2026__card-nav-btn:hover {
+    background: #1d4ed8;
+}
+
+.team2026__card-nav-btn svg {
+    height: 12px;
+    width: 12px;
+}
+
+.team2026__card-nav-divider {
+    height: 14px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================
+   AVATAR ROW
+   ========================================================== */
+
+.team2026__avatar-row {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    margin-top: 8px;
+    overflow-x: auto;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    cursor: grab;
+}
+
+.team2026__avatar-row:active {
+    cursor: grabbing;
+}
+
+/* Hide scrollbar */
+.team2026__avatar-row::-webkit-scrollbar {
+    display: none;
+}
+
+.team2026__avatar-row {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.team2026__avatar-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    min-width: max-content;
+    padding: 0 32px;
+    margin: 0 auto;
+}
+
+/* ---------- Avatar button ---------- */
+
+.team2026__avatar-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.team2026__avatar-ring {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.team2026__avatar-btn:hover .team2026__avatar-ring {
+    border-color: #93c5fd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.team2026__avatar-ring--selected {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px #3b82f6, 0 0 0 6px #ffffff;
+}
+
+.team2026__avatar-inner {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f8fafc;
+}
+
+.team2026__avatar-inner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+.team2026__avatar-btn:hover .team2026__avatar-inner img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.team2026__avatar-inner img.team2026__avatar-img--selected {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+/* ==========================================================
+   TITLE CARD (Section label)
+   ========================================================== */
+
+.team2026__title-card {
+    width: 100%;
+    max-width: 1280px;
+    margin: 32px auto 24px;
+    padding: 0 24px;
+}
+
+.team2026__title-card h2 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.team2026__footer {
+    width: 100%;
+    background: #18181b;
+    border-top: 1px solid #27272a;
+    color: #d4d4d8;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    padding: 64px 24px;
+    margin-top: auto;
+}
+
+.team2026__footer-grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.team2026__footer-col h4 {
+    font-size: 11px;
+    font-weight: 700;
+    color: #a1a1aa;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid #3f3f46;
+    padding-bottom: 8px;
+    margin: 0 0 12px;
+}
+
+.team2026__footer-col p,
+.team2026__footer-col a,
+.team2026__footer-col li {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.team2026__footer-col a {
+    color: #d4d4d8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.team2026__footer-col a:hover {
+    color: #ffffff;
+}
+
+.team2026__footer-col .team2026__footer-email {
+    color: #22d3ee;
+    font-weight: 600;
+}
+
+.team2026__footer-col .team2026__footer-email:hover {
+    text-decoration: underline;
+}
+
+.team2026__footer-col .team2026__footer-maps {
+    color: #22d3ee;
+}
+
+.team2026__footer-col .team2026__footer-maps:hover {
+    text-decoration: underline;
+}
+
+.team2026__footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Newsletter column spans 2 */
+.team2026__footer-col--wide {
+    grid-column: span 2;
+}
+
+.team2026__footer-col--wide p {
+    font-size: 12px;
+    color: #a1a1aa;
+    line-height: 1.6;
+    margin: 0 0 8px;
+}
+
+.team2026__newsletter-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.team2026__newsletter-input {
+    flex: 1;
+    background: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.team2026__newsletter-input:focus {
+    border-color: #22d3ee;
+}
+
+.team2026__newsletter-input::placeholder {
+    color: #71717a;
+}
+
+.team2026__newsletter-btn {
+    background: #ffffff;
+    color: #18181b;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team2026__newsletter-btn:hover {
+    background: #e4e4e7;
+}
+
+/* Footer copyright bar */
+
+.team2026__footer-bottom {
+    max-width: 1280px;
+    margin: 48px auto 0;
+    border-top: 1px solid #27272a;
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.team2026__footer-brand h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.team2026__footer-brand p {
+    margin: 2px 0 0;
+    font-size: 10px;
+    color: #71717a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: 'Courier New', monospace;
+}
+
+.team2026__footer-copy {
+    font-size: 12px;
+    color: #71717a;
+    font-weight: 500;
+}
+
+/* ==========================================================
+   RESPONSIVE — TABLET
+   ========================================================== */
+
+@media (max-width: 1024px) {
+    .team2026__hero-inner {
+        min-height: 700px;
+        padding: 32px 16px;
+    }
+
+    .team2026__watermark span {
+        font-size: 5.5vw;
+    }
+
+    .team2026__role-label {
+        font-size: 12px;
+        left: 16px;
+    }
+
+    .team2026__footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team2026__footer-col--wide {
+        grid-column: span 2;
+    }
+
+    .team2026__avatar-ring {
+        height: 56px;
+        width: 56px;
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE — MOBILE
+   ========================================================== */
 
 @media (max-width: 700px) {
+    .team2026__hero-inner {
+        min-height: 520px;
+        padding: 24px 12px;
+    }
 
-  .team2026 {
-    padding-top: 60px;
-  }
+    .team2026__bg-portrait {
+        padding-top: 32px;
+    }
 
-  .team2026__grid {
-    background-size: 55px 55px;
-  }
+    .team2026__bg-portrait img {
+        max-height: 420px;
+    }
 
-  .team2026__header {
-    padding: 50px 20px 80px;
-  }
+    .team2026__watermark span {
+        font-size: 8vw;
+    }
 
-  .team2026__eyebrow {
-    margin-bottom: 30px;
+    .team2026__role-label {
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        left: 12px;
+        top: 28%;
+    }
 
-    font-size: 9px;
+    .team2026__card {
+        width: 280px;
+    }
 
-    text-align: center;
-  }
+    .team2026__avatar-ring {
+        height: 48px;
+        width: 48px;
+    }
 
-  .team2026__line {
-    width: 25px;
-  }
+    .team2026__avatar-list {
+        gap: 16px;
+        padding: 0 16px;
+    }
 
-  .team2026__title {
-    font-size: clamp(3.4rem, 16vw, 6rem);
+    .team2026__footer {
+        padding: 40px 16px;
+    }
 
-    line-height: 0.9;
-  }
+    .team2026__footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
 
-  .team2026__intro {
-    margin-top: 32px;
+    .team2026__footer-col--wide {
+        grid-column: span 1;
+    }
 
-    font-size: 0.95rem;
+    .team2026__newsletter-form {
+        flex-direction: column;
+    }
 
-    line-height: 1.65;
-  }
+    .team2026__footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 32px;
+        padding-top: 24px;
+        gap: 12px;
+    }
 
-  .team2026__meta {
-    font-size: 8px;
-
-    gap: 8px;
-  }
-
-  .team2026__section {
-    padding: 65px 20px 85px;
-  }
-
-  .team2026__section-header {
-    margin-bottom: 45px;
-
-    gap: 22px;
-  }
-
-  .team2026__number {
-    font-size: 9px;
-
-    margin-bottom: 16px;
-  }
-
-  .team2026__section-header h2 {
-    font-size: clamp(3rem, 14vw, 5rem);
-
-    line-height: 0.88;
-  }
-
-  .team2026__section-description {
-    max-width: 420px;
-
-    font-size: 0.9rem;
-
-    line-height: 1.65;
-  }
-
-  /* One column on mobile */
-
-  .team2026__gallery {
-    width: 100%;
-
-    max-width: 420px;
-
-    grid-template-columns: 1fr;
-
-    gap: 55px;
-  }
-
-  /* Disable desktop centering rules */
-
-  .team2026__gallery-item:nth-child(3n + 1):last-child,
-  .team2026__gallery-item:nth-child(3n + 1):nth-last-child(2),
-  .team2026__gallery-item:nth-child(3n + 2):last-child,
-  .team2026__gallery-item:nth-child(2n + 1):last-child {
-    grid-column: auto;
-  }
-
-  .team2026__gallery-item {
-    width: 100%;
-
-    justify-content: center;
-  }
-
-  .team2026__gallery-item .title-card {
-    max-width: 360px;
-  }
-
-  .team2026__end {
-    padding: 75px 20px 110px;
-  }
-
-  .team2026__end h2 {
-    font-size: clamp(3rem, 14vw, 5.5rem);
-  }
+    .team2026__title-card {
+        padding: 0 16px;
+    }
 }
 
 /* ==========================================================
-   SMALL PHONES
-========================================================== */
+   RESPONSIVE — SMALL PHONES
+   ========================================================== */
 
 @media (max-width: 420px) {
+    .team2026__hero-inner {
+        min-height: 440px;
+    }
 
-  .team2026__header {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    .team2026__card {
+        width: 260px;
+    }
 
-  .team2026__section {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    .team2026__avatar-ring {
+        height: 44px;
+        width: 44px;
+    }
 
-  .team2026__title {
-    font-size: 3.2rem;
-  }
+    .team2026__avatar-list {
+        gap: 12px;
+        padding: 0 12px;
+    }
 
-  .team2026__intro {
-    font-size: 0.9rem;
-  }
-
-  .team2026__meta {
-    font-size: 7px;
-  }
-
-  .team2026__gallery {
-    gap: 48px;
-  }
-
-  .team2026__section-header h2 {
-    font-size: 3rem;
-  }
-
-  .team2026__end {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+    .team2026__watermark span {
+        font-size: 10vw;
+    }
 }
